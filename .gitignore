@@ -59,3 +59,11 @@ typings/
 
 # next.js build output
 .next
+.idea/misc.xml
+.idea/modules.xml
+.idea/okahim.iml
+.idea/vcs.xml
+.idea/webResources.xml
+.idea/workspace.xml
+package-lock.json
+package-lock.json
