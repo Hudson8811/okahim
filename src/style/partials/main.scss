@@ -39,6 +39,8 @@ a {
 }
 
 .btn{
-	opacity: .8;
+	&:hover{
+		opacity: .8;
+	}
 
 }
