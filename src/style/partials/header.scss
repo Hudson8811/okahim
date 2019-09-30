@@ -1,0 +1,137 @@
+header {
+    box-shadow: 0 0 30px rgba(9, 32, 61, 0.2);
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.page-header {
+    max-width: 1139px;
+    margin: 0 auto;
+
+    &__top-line {
+        display: flex;
+        align-items: center;
+        padding: 32px 0 44px;
+
+    }
+
+    &__logo {
+        flex-grow: 1;
+
+        img {}
+    }
+
+    &__search {
+        input {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            border: none;
+            border-bottom: 1px solid #cccccc;
+            width: 239px;
+            margin-right: 4.6%;
+
+            &::placeholder {
+                color: #666666;
+            }
+        }
+
+    }
+
+    &__search-btn {}
+
+    &__phone-numbers {
+        margin-right: 5.7%;
+        text-align: right;
+    }
+
+    &__main-phone {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 26.65px;
+        text-transform: uppercase;
+    }
+
+    &__phones-desc {
+        font-size: 14px;
+        color: #666666;
+        font-weight: 400;
+        line-height: 26.65px;
+    }
+
+    &__another-phones {
+        display: none;
+    }
+
+    &__online-req-btn {
+        width: 212px;
+        border-radius: 30px;
+        background-color: #ea961c;
+        font-weight: 700;
+        line-height: 26.65px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 60px;
+        display: block;
+
+        &:hover {}
+
+        &:active {}
+
+        &:focus {}
+    }
+
+    /*****************************/
+    &__bottom-line {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        line-height: 26.65px;
+        justify-content: space-between;
+        padding-bottom: 20px;
+
+    }
+
+    &__menu {
+
+
+
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0 -16px;
+
+            li {
+                margin: 0 16px;
+            }
+        }
+    }
+
+    &__lang {
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0 -14px;
+            line-height: 16px;
+
+        }
+
+        li {
+            border-right: 1px solid #c3c3c3;
+            padding: 0 14px;
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+        }
+    }
+}
