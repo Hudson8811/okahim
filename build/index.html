@@ -11,31 +11,56 @@
 
 <body>
 
-<header>
+<header class="header_with-box-shadow">
     <div class="page-header">
         <div class="page-header__top-line">
+            <div class="page-header__burger">
+                <span></span>
+            </div>
             <div class="page-header__logo">
-                <img src="img/header-logo.png" alt="">
+                <img class="page-header__logo-img-desktop" src="img/header-logo.svg" alt="">
+                <img class="page-header__logo-img-mob" src="img/header-logo-mobile.svg" alt="">
             </div>
             <div class="page-header__search">
                 <input type="text" placeholder="Поиск по сайту">
-                <div class="page-header__search-btn"></div>
+                <div class="page-header__search-btn"><img src="img/search.png" alt=""></div>
             </div>
             <div class="page-header__phone-numbers">
-                <a href="tel:+78003215476" class="page-header__main-phone">+7 800 321-54-76</a>
-                <div class="page-header__phones-desc">Бесплатно по Росии</div>
-                <div class="page-header__another-phones"></div>
+                <div class="page-header__phone-numbers-visible">
+                    <div class="page-header__main-phone">+7 800 321-54-76</div>
+                    <div class="page-header__phones-desc">Бесплатно по Росии</div>
+                </div>
+                <div class="page-header__another-phones">
+                    <div class="city">Дзержинск
+                    </div>
+                    <div class="number">+7 (8313) 31-01-55</div>
+                    <div class="city">Екатеринбург
+                    </div>
+                    <div class="number">+7 (343) 286-82-97</div>
+                    <div class="city">Н.Новгород
+                    </div>
+                    <div class="number">+7 (831) 274-88-26</div>
+                    <div class="city">Самара
+                    </div>
+                    <div class="number">+7 (846) 276-99-93</div>
+                    <div class="city">Краснодар
+                    </div>
+                    <div class="number">+7 (861) 290-86-68</div>
+                    <div class="city">Санкт-Петербург
+                    </div>
+                    <div class="number">+7 (812) 407-71-60</div>
+                </div>
             </div>
-            <a href="" class="btn page-header__online-req-btn">Онлайн заявка</a>
+            <a href="" class="btn page-header__online-req-btn"><span>Онлайн заявка</span></a>
         </div>
         <div class="page-header__bottom-line">
             <div class="page-header__menu">
                 <ul>
-                    <li>Компания</li>
-                    <li>Каталог продукции</li>
-                    <li>Доставка</li>
-                    <li>Новости</li>
-                    <li>Контакты</li>
+                    <li><a href="" class="active">Компания</a></li>
+                    <li><a href="">Каталог продукции</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Новости</li>
+                    <li><a href="">Контакты</a></li>
                 </ul>
             </div>
             <div class="page-header__lang">
