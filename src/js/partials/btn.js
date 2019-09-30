@@ -1,7 +1,7 @@
 
 $('body').append('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters"><defs><filter id="filter-goo"><feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" /><feComposite in="SourceGraphic" in2="goo" /></filter></defs></svg>');
 
-$('.btn-orange').each(function () {
+$('.btn-orange, .btn-blue').each(function () {
     $(this).append('<span class="button__container"><span class="circle top-left"></span><span class="circle top-left"></span><span class="circle top-left"></span><span class="button__bg"></span><span class="circle bottom-right"></span><span class="circle bottom-right"></span><span class="circle bottom-right"></span></span>');
 });
 
@@ -10,7 +10,7 @@ initBtn();
 
 
 function initBtn() {
-    var btns = document.querySelectorAll('.btn-orange');
+    var btns = document.querySelectorAll('.btn-orange, .btn-blue');
 
 
     var divs = document.querySelectorAll('div');

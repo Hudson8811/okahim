@@ -147,3 +147,19 @@ $dark : #333333;
     }
   }
 }
+
+.btn-blue{
+  @extend .btn-orange;
+
+  .button__bg, .circle {
+    background: $blue;
+  }
+
+  .button__bg {
+    background: $blue;
+  }
+
+  .circle {
+    background: $blue;
+  }
+}
