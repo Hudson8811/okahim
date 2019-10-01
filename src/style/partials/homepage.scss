@@ -1,0 +1,195 @@
+.full-width-slider {
+    position: relative;
+
+    .swiper-container {
+        .swiper-wrapper {}
+
+        .swiper-slide {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 85px;
+
+            .left {
+                flex-grow: 1;
+
+                .title {
+                    font-size: 50px;
+                    font-weight: 400;
+                    line-height: 62px;
+                    margin-top: 25px;
+
+                    a {
+                        color: #455bd7;
+                        text-decoration: underline;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+
+                        &:active {}
+
+                        &:focus {}
+                    }
+                }
+
+                .description {
+                    color: #666666;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 26px;
+                    margin-top: 22px;
+                }
+
+                .btn-orange {
+                    margin-top: 48px;
+                }
+            }
+
+
+            .right {
+                .circle {
+                    width: 470px;
+                    height: 470px;
+                    background-color: #f7f8f9;
+                    position: relative;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                img {
+                    width: calc(100% - 66px);
+                    left: 33px;
+                    bottom: 43px;
+                    position: absolute;
+                }
+            }
+
+        }
+    }
+
+    .swiper-pagination {}
+
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            width: 14px;
+            height: 14px;
+            background-color: #333333;
+            opacity: 0.15;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #ea961c;
+            opacity: 1;
+        }
+    }
+
+    .swiper-button-prev {}
+
+    .swiper-button-next {}
+
+}
+
+.catalog {
+    .container {
+        border-radius: 15px;
+        background-color: #f7f8f9;
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        padding: 64px 52px 0 50px;
+
+        .title {
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 38px;
+        }
+
+        .tab-controls {
+            display: flex;
+
+            .item {
+                color: #666666;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 17px;
+
+                path {
+                    fill: #666666;
+                }
+
+                &.active {
+
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 17px;
+                    color: #455bd7;
+
+                    path {
+                        fill: #455bd7;
+                    }
+
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: calc(50% + 2px);
+                        display: block;
+                        width: 100%;
+                        border-top: 1px dashed #455bd7;
+
+                    }
+
+                }
+            }
+        }
+
+        .all-catalog {
+            color: #455bd7;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 34px;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &:active {}
+
+            &:focus {}
+        }
+    }
+
+    .tabs {
+        padding: 0 64px 63px 77px;
+
+        .tab {
+            display: none;
+
+            &.active {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .item {
+                width: 33.33333333333333%;
+            }
+
+            .invisible-refs {
+                .title {}
+
+                a {
+                    &:hover {}
+
+                    &:active {}
+
+                    &:focus {}
+                }
+            }
+        }
+    }
+}

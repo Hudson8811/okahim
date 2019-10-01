@@ -37,9 +37,12 @@ $(document).ready(function () {
         }
     }
 
+    var pffh = $('.padding-for-fixed-header');
+    pffh.attr('style', 'padding-top:' + $("header").height() + 'px');
     $(window).resize(function () {
         if (!burger.is(':visible')) {
             hMenu.attr('style', '');
+            burger.removeClass('active');
             if (!$('.page-header__logo').next().is($('.page-header__search'))) {
                 $('.page-header__logo').after($('.page-header__search'), $('.page-header__phone-numbers'));
             }
@@ -49,6 +52,9 @@ $(document).ready(function () {
                 $('.page-header__menu').after($('.page-header__search'), $('.page-header__phone-numbers'));
             }
         }
+
+        pffh.attr('style', 'padding-top:' + $("header").height() + 'px');
     });
+
 
 });

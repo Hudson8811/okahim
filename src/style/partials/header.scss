@@ -1,6 +1,8 @@
 header {
     background-color: #ffffff;
     width: 100%;
+    position: fixed;
+    z-index: 100000;
 
     &.header_with-box-shadow {
         box-shadow: 0 0 30px rgba(9, 32, 61, 0.2);
@@ -8,9 +10,12 @@ header {
 
 }
 
+.padding-for-fixed-header {
+    width: 100%;
+}
 
 .page-header {
-    width: 1139px;
+    width: 1140px;
     max-width: calc(100% - 60px);
     margin: 0 auto;
 
@@ -108,7 +113,7 @@ header {
         border-radius: 15px;
         background-color: #ffffff;
         padding: 35px 39px 42px;
-        text-align-last: left;
+        text-align: left;
 
         .city {
             white-space: nowrap;
@@ -319,6 +324,7 @@ header {
     .page-header {
         &__top-line {
             justify-content: space-between;
+            padding: 16px 0 29px;
         }
 
         &__burger {
@@ -399,10 +405,15 @@ header {
         /*****************************/
         &__bottom-line {
             display: none;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            background: #ffffff;
 
         }
 
         &__menu {
+            padding-bottom: 27px;
 
             ul {
                 display: block;
@@ -428,8 +439,10 @@ header {
 
         &__search {
             margin-right: 0;
-            margin-top: 29px;
             padding-bottom: 0px;
+
+            max-width: 290px;
+            margin: 0 auto;
 
             input {
                 width: calc(100% - 30px);
@@ -456,16 +469,27 @@ header {
 
         &__main-phone {
             &:after {
-                right: calc(50% - 95px);}
+                right: calc(50% - 95px);
+            }
         }
 
         &__phones-desc {
-            padding-left: 25px;}
+            padding-left: 25px;
+        }
 
         &__another-phones {
-            .city {}
+            left: -15px;
+            width: 100%;
+            padding: 12px 15px;
+            text-align: center;
 
-            .number {}
+            .city {
+                line-height: 32px;
+            }
+
+            .number {
+                font-weight: 400;
+            }
         }
 
 
@@ -484,4 +508,5 @@ header {
             }
         }
     }
+
 }
