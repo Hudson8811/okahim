@@ -255,17 +255,17 @@ ol li::before {
 
 %margin_ul{
   &:not(:last-child){
-    margin-bottom: 120px;
+    margin-bottom: 53px;
   }
   &:not(:first-child){
-    margin-top: 120px;
+    margin-top: 53px;
   }
   @media all and (max-width: 760px) {
     &:not(:last-child){
-      margin-bottom: 70px;
+      margin-bottom: 43px;
     }
     &:not(:first-child){
-      margin-top: 70px;
+      margin-top: 43px;
     }
   }
 }
