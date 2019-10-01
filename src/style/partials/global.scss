@@ -285,9 +285,17 @@ $dark : #333333;
     @extend %margin_ul;
   }
 
-
-  p + p{
-    margin-top: 1em;
+  p{
+    a{
+      color: $blue;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    + p{
+      margin-top: 1em;
+    }
   }
 }
 
