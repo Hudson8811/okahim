@@ -33,8 +33,6 @@ $dark : #333333;
 }
 
 
-
-
 %button {
   -webkit-font-smoothing: antialiased;
   border: none;
@@ -148,7 +146,6 @@ $dark : #333333;
 
 
 
-
 .h1{
   font-size: 50px;
   line-height: 62px;
@@ -173,7 +170,6 @@ $dark : #333333;
   font-size: 16px;
   line-height: 26px;
 }
-
 
 .ul{
   list-style: none;
@@ -219,22 +215,10 @@ $dark : #333333;
   }
 }
 
-
-ol {
-
-}
-ol li {
-}
-ol li::before {
-  color: red;
-  font-weight: bold;
-}
-
 .pagetitle{
   margin-top: 10px;
   margin-bottom: 55px;
 }
-
 
 %margin_h{
   &:not(:last-child){
@@ -270,7 +254,6 @@ ol li::before {
   }
 }
 
-
 .text-style{
   font-size: 16px;
   line-height: 26px;
@@ -305,5 +288,94 @@ ol li::before {
 
   p + p{
     margin-top: 1em;
+  }
+}
+
+
+.input{
+  color: $dark;
+  font-family: $font1;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 14px 22px 15px;
+  box-sizing: border-box;
+  width: 303px;
+  border-radius: 6px;
+  background-color: $lightGray;
+  border: 1px solid $lightGray;
+  margin: 0;
+  &::placeholder{
+    font-family: $font1;
+    font-size: 16px;
+    font-weight: 400;
+    color: $dark;
+    opacity: 0.7;
+  }
+  &.not-empty,
+  &:focus{
+    outline: none;
+    border-color: $blue;
+    background: #eceffb;
+  }
+  &.error{
+    border-color: $orange;
+    background: #fdf4e8;
+  }
+
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  + label {
+    color: $dark;
+    font-family: $font1;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: $lightGray;
+    border: 1px solid $lightGray;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0;
+    padding: 14px 54px 15px 22px;
+    width: 303px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    position: relative;
+    * {
+      pointer-events: none;
+    }
+    &:hover{
+      border-color: $blue;
+      background: #eceffb;
+      &::after{
+        background-image: url("../img/input-file-select.svg");
+      }
+    }
+    &::after{
+      content: "";
+      display: inline-block;
+      width: 21px;
+      height: 21px;
+      background: url("../img/input-file.svg") center center no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: 19px;
+      top: calc(50% - 10px);
+    }
+  }
+  &.has-file,
+  &:focus{
+    + label{
+      border-color: $blue;
+      background: #eceffb;
+      &::after{
+        background-image: url("../img/input-file-select.svg");
+      }
+    }
   }
 }

@@ -10,3 +10,4 @@
 //= partials/main.js
 //= partials/header.js
 //= partials/btn.js
+//= partials/input.file.js
