@@ -446,6 +446,7 @@ $dark : #333333;
 }
 
 .close-btn{
+  display: inline-block;
   width: 41px;
   height: 41px;
   border-radius: 100%;
@@ -459,5 +460,37 @@ $dark : #333333;
     background-color: $orange;
     background-image: url("../img/close-hover.svg");
   }
+}
 
+
+
+.circle-btn{
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 100%;
+  border: 2px solid #d6d6d6;
+  background-color: #ffffff;
+  background-size: 13px 13px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  &.arr-left{background-image: url("../img/arr-left.svg")}
+  &.arr-right{background-image: url("../img/arr-right.svg")}
+  &.arr-up{background-image: url("../img/arr-up.svg")}
+  &.arr-down{background-image: url("../img/arr-down.svg")}
+  &.zoom{background-image: url("../img/zoom.svg")}
+
+  &:hover{
+    border-color: $orange;
+    background-color: $orange;
+    &.arr-left{background-image: url("../img/arr-left-hover.svg")}
+    &.arr-right{background-image: url("../img/arr-right-hover.svg")}
+    &.arr-up{background-image: url("../img/arr-up-hover.svg")}
+    &.arr-down{background-image: url("../img/arr-down-hover.svg")}
+    &.zoom{background-image: url("../img/zoom-hover.svg")}
+  }
 }
