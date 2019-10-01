@@ -34,24 +34,6 @@ $dark : #333333;
 
 
 
-.h1{
-  font-size: 50px;
-  line-height: 62px;
-}
-
-.h2{
-  font-size: 40px;
-  line-height: 46px;
-}
-
-
-
-.pagetitle{
-  margin-top: 10px;
-  margin-bottom: 55px;
-}
-
-
 
 %button {
   -webkit-font-smoothing: antialiased;
@@ -161,5 +143,151 @@ $dark : #333333;
 
   .circle {
     background: $blue;
+  }
+}
+
+
+
+
+.h1{
+  font-size: 50px;
+  line-height: 62px;
+}
+
+.h2{
+  font-size: 40px;
+  line-height: 46px;
+}
+
+.h3{
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.h4{
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.p{
+  font-size: 16px;
+  line-height: 26px;
+}
+
+
+.ul{
+  list-style: none;
+  li{
+    padding-left: 29px;
+    font-size: 16px;
+    line-height: 26px;
+    position: relative;
+    &::before{
+      content: "";
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      background-color: $blue;
+      position: absolute;
+      left: 0;
+      top: 11px;
+    }
+  }
+}
+
+.ol{
+  list-style: none;
+  counter-reset: my-counter;
+  li{
+    padding-left: 29px;
+    font-size: 16px;
+    line-height: 26px;
+    position: relative;
+    counter-increment: my-counter;
+    &::before{
+      content: counter(my-counter) ".";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 6px;
+      color: $blue;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1em;
+    }
+  }
+}
+
+
+ol {
+
+}
+ol li {
+}
+ol li::before {
+  color: red;
+  font-weight: bold;
+}
+
+.pagetitle{
+  margin-top: 10px;
+  margin-bottom: 55px;
+}
+
+
+%margin_h{
+  &:not(:last-child){
+    margin-bottom: 32px;
+  }
+  &:not(:first-child){
+    margin-top: 53px;
+  }
+}
+
+%margin_ul{
+  &:not(:last-child){
+    margin-bottom: 120px;
+  }
+  &:not(:first-child){
+    margin-top: 120px;
+  }
+}
+
+
+.text-style{
+  font-size: 16px;
+  line-height: 26px;
+
+  h1{
+    @extend .h1;
+    @extend %margin_h;
+  }
+  h2{
+    @extend .h2;
+    @extend %margin_h;
+  }
+  h3{
+    @extend .h3;
+    @extend %margin_h;
+  }
+  h4{
+    @extend .h4;
+    @extend %margin_h;
+  }
+
+  ul{
+    @extend .ul;
+    @extend %margin_ul;
+  }
+
+  ol{
+    @extend .ol;
+    @extend %margin_ul;
+  }
+
+
+  p + p{
+    margin-top: 1em;
   }
 }
