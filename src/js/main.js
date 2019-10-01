@@ -12,3 +12,4 @@
 //= partials/header.js
 //= partials/btn.js
 //= partials/homepage.js
+//= partials/input.file.js

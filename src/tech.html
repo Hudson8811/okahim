@@ -18,19 +18,13 @@
 <div class="page-content">
     <div class="container">
 
-        <div class="bread">
-            <a href="">Главная</a>
-            <span class="sep">&raquo;</span>
-            <a href="">Пункт 1</a>
-            <span class="sep">&raquo;</span>
-            <span class="current">Текущий пункт</span>
-        </div>
+        //= template/bread.html
 
-        <h2 class="pagetitle h2">Заголовок страницы</h2>
+
+        <h1 class="pagetitle h2">Заголовок страницы</h1>
 
         <button class="btn-orange">Оранжевая кнопка</button>
-        <button class="btn-blue">Оранжевая кнопка</button>
-        <button class="btn-orange">Оранжевая кнопка</button>
+        <button class="btn-blue">Синяя кнопка</button>
 
         <div class="text-style">
             <h1>H1 headline 50/62</h1>
@@ -61,6 +55,63 @@
                 <li>данные запроса (время, источник перехода, IP-адрес).</li>
             </ol>
         </div>
+
+        <div>
+            <input type="text" class="input" placeholder="name" value="Константин">
+        </div>
+        <div>
+            <input type="text" class="input not-empty" placeholder="email" value="info@gmail.com">
+        </div>
+        <div>
+            <input type="text" class="input error" placeholder="email" value="info@gmail.com">
+        </div>
+        <div>
+            <input type="file" name="file" id="file" class="inputfile" multiple>
+            <label for="file"><span>Прикрепить резюме</span></label>
+        </div>
+        <div>
+            <input type="file" name="file" id="file" class="inputfile has-file" multiple>
+            <label for="file"><span>file:///C:/Designer/image.jpg</span></label>
+        </div>
+
+        <div>
+            <label class="checkbox">
+                <input type="checkbox" >
+                <span>Unchecked</span>
+            </label>
+        </div>
+
+        <div>
+            <label class="checkbox">
+                <input type="checkbox" checked>
+                <span>Checked</span>
+            </label>
+        </div>
+
+        <div>
+            <div class="close-btn"></div>
+        </div>
+
+
+        <div>
+            <div class="circle-btn arr-left"></div>
+            <div class="circle-btn arr-right"></div>
+            <div class="circle-btn arr-up"></div>
+            <div class="circle-btn arr-down"></div>
+            <div class="circle-btn zoom"></div>
+        </div>
+
+        <div class="pagination">
+            <a href="" class="prev circle-btn arr-left"></a>
+            <a href=""  class="page-link">1</a>
+            <a class="page-link current">2</a>
+            <a href="" class="page-link">3</a>
+            <span class="sep">...</span>
+            <a href="" class="page-link">4</a>
+            <a href="" class="next circle-btn arr-right"></a>
+        </div>
+
+
     </div>
 </div>
 
