@@ -1,0 +1,150 @@
+footer {
+    background-color: #13204e;
+
+    .new_line_desktop{
+        display: block;
+    }
+
+}
+
+.page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26.65px;
+    color: #717995;
+    padding: 52px 0 64px;
+
+    &__left {
+        display: block;
+    }
+
+    &__logo {
+        width: 139px;
+        display: block;
+
+        path,
+        polygon {
+            fill: #424d71;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__center {
+        text-align: center;
+        padding: 0 55px;
+
+        p {}
+
+        a {
+            color: #ffffff;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &:active {}
+
+            &:focus {}
+        }
+    }
+
+    &__right {
+        text-align: right;
+
+        p {
+            white-space: nowrap;
+        }
+
+        a {
+            color: #ffffff;
+            font-weight: black;
+            font-family: 'Proxima Nova', 'Montserrat';
+            text-transform: uppercase;
+            &:hover {}
+
+            &:active {}
+
+            &:focus {}
+        }
+    }
+}
+
+
+@media (max-width:870px) {
+    .page-footer {
+        font-size: 14px;
+        line-height: 22px;
+
+        &__logo {
+            width: 105px;
+        }
+    }
+}
+
+
+
+@media (max-width:626px) {
+    footer {
+        .new_line_desktop{
+            display: none;
+        }
+    }
+
+    .page-footer {
+        flex-wrap: wrap;
+        padding: 52px 0 50px;
+
+        &__left {
+            width: 50%;
+            order: -2;
+        }
+
+        &__logo {
+
+            path,
+            polygon {}
+
+            img {}
+        }
+
+        &__center {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 34px 6px 0px;
+
+            font-size: 12px;
+            p {}
+
+            a {
+
+                &:hover {}
+
+                &:active {}
+
+                &:focus {}
+            }
+        }
+
+        &__right {
+            width: 50%;
+            order: -1;
+        }
+
+        a {
+
+            &:hover {}
+
+            &:active {}
+
+            &:focus {}
+        }
+    }
+}
