@@ -169,6 +169,13 @@ $dark : #333333;
 .p{
   font-size: 16px;
   line-height: 26px;
+  a{
+    color: $blue;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
 }
 
 .ul{
@@ -286,13 +293,7 @@ $dark : #333333;
   }
 
   p{
-    a{
-      color: $blue;
-      text-decoration: underline;
-      &:hover{
-        text-decoration: none;
-      }
-    }
+    @extend .p;
     + p{
       margin-top: 1em;
     }
@@ -533,6 +534,59 @@ $dark : #333333;
   * {
     + *{
       margin-left: 35px;
+    }
+  }
+}
+
+
+.share-block{
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  box-shadow: 10px 17px 50px rgba(9, 32, 61, 0.2);
+  border-radius: 15px;
+  background-color: #ffffff;
+  overflow: hidden;
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    +a{
+      &::before{
+        content: "";
+        display: block;
+        width: 50px;
+        height: 1px;
+        background-color: #cccccc;
+        opacity: 0.4;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    img{
+      display: block;
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+    }
+    &:hover{
+      &::before{
+        display: none;
+      }
+      img{
+        filter: brightness(100);
+      }
+      &.vk{background-color: #6695bd;}
+      &.fb{background-color: #3b5998;}
+      &.tw{background-color: #00a1f4;}
+      &.ok{background-color: #ff9205;}
+      &.vb{background-color: #7b519d;}
+      &.wa{background-color: #65bc54;}
     }
   }
 }
