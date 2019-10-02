@@ -8,6 +8,7 @@ $dark : #333333;
 
 .page-content{
   margin-top: 60px;
+  margin-bottom: 114px;
 }
 
 .bread{
@@ -19,6 +20,9 @@ $dark : #333333;
   a{
     color: $dark;
     text-decoration: underline;
+    &:not(:first-child){
+      text-decoration: none;
+    }
     &:hover{
       text-decoration: none;
     }

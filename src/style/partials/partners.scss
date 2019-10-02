@@ -1,0 +1,25 @@
+.partner-page{
+  .partners-grid{
+    @include flex-row(30px, 30px);
+    margin-top: 20px;
+    margin-bottom: 110px;
+    .item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 166px;
+      border-radius: 15px;
+      background-color: $lightGray;
+      @include flex-block(204px, 30px, 30px, true, 5);
+      transition: box-shadow 0.2s linear;
+      img{
+        display: block;
+        max-width: calc(100% - 40px);
+        max-height: calc(100% - 40px);
+      }
+      &:hover{
+        box-shadow: 0 20px 30px rgba(9, 32, 61, 0.15);
+      }
+    }
+  }
+}
