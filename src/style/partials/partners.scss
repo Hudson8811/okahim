@@ -22,4 +22,30 @@
       }
     }
   }
+
+  .contact-us-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 40px 50px 62px;
+    background: $lightGray;
+    border-radius: 15px;
+    margin-top: 30px;
+    .left{
+      display: flex;
+      align-items: center;
+      img{
+        width: 60px;
+        display: block;
+      }
+      .text{
+        color: $dark;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        margin-left: 45px;
+        max-width: 500px;
+      }
+    }
+  }
 }
