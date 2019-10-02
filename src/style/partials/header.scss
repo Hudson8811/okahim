@@ -4,6 +4,7 @@ header {
     position: fixed;
     z-index: 100000;
 
+    transition: .5s;
     &.header_with-box-shadow {
         box-shadow: 0 0 30px rgba(9, 32, 61, 0.2);
     }
@@ -75,10 +76,7 @@ header {
         position: relative;
     }
 
-    &__phone-numbers-visible {
-        padding-right: 31px;
-        cursor: pointer;
-    }
+
 
     &__main-phone {
         font-size: 22px;
@@ -88,17 +86,29 @@ header {
         color: #333333;
         position: relative;
 
-        &:after {
+        &::after {
             content: '';
             position: absolute;
             width: 8px;
-            height: 5px;
-            background: url('../img/arrow.png') no-repeat center center;
+            height: 9px;
+            background: url(../img/arrow-right.svg) no-repeat center center;
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
             right: -21px;
-            top: 11px;
+            top: 8px;
+            transition-duration: .2s;
         }
     }
+    &__phone-numbers-visible {
+        padding-right: 31px;
+        cursor: pointer;
+        &.another-visible{
+            .page-header__main-phone::after{
 
+            transform: rotate(270deg);
+            }
+        }
+    }
     &__phones-desc {
         font-size: 14px;
         color: #666666;
@@ -203,6 +213,7 @@ header {
             border-right: 1px solid #c3c3c3;
             padding: 0 14px;
 
+            transition: 0.2s;
             &:last-child {
                 border-right: 0;
             }
@@ -211,6 +222,7 @@ header {
         a {
             text-decoration: underline;
 
+            transition: 0.2s;
             &:hover {
                 text-decoration: none;
             }
@@ -276,7 +288,9 @@ header {
             height: 50px;
             border-radius: 50%;
             padding: 0;
-            background: #ea961c url('../img/req_btn_bg.png') no-repeat center center;
+            background: #ea961c url('../img/onl-req.svg') no-repeat center center;
+            background-size: 34% auto;
+
 
             span {
                 display: none;

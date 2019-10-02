@@ -11,9 +11,26 @@ $(document).ready(function () {
                 clickable: true,
             },
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next-c',
+                prevEl: '.swiper-button-prev-c',
             },
         })
     }
+
+    //section catalog
+    console.log($('.catalog .tabs .item .title').siblings('.invisible-refs').html());
+   $('.catalog .tabs .item .title').each(function () {
+
+        $(this).tooltipster({
+            animation: 'fade',
+            delay: 200,
+            content:$(this).siblings('.invisible-refs').html(),
+            contentAsHTML: true,
+            trigger: 'click',
+            arrow:false,
+            side: 'bottom',
+            theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
+            interactive: true
+         });
+    });
 });

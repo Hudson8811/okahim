@@ -5,7 +5,7 @@
 //= libs/jquery.maskedinput.min.js
 //= libs/TweenMax.min.js
 //= libs/swiper.min.js
-//= libs/tooltipster.main.min.js
+//= libs/tooltipster.bundle.min.js
 /* my scripts */
 
 //= partials/main.js

@@ -1,12 +1,15 @@
 $(document).ready(function () {
     var headerNumbers = $('.page-header__another-phones');
+    var phpnv = $('.page-header__phone-numbers-visible');
     $('.page-header__phone-numbers-visible').click(function () {
+        phpnv.toggleClass('another-visible');
         headerNumbers.stop().slideToggle(200);
     });
     $(document).mouseup(function (e) {
         if (!headerNumbers.is(e.target)
             && headerNumbers.has(e.target).length === 0) {
             if (headerNumbers.css('display') !== 'none') {
+                phpnv.removeClass('another-visible');
                 headerNumbers.stop().slideUp(200);
             }
         }
@@ -57,4 +60,19 @@ $(document).ready(function () {
     });
 
 
+
+    //for homepage
+
+    if ($('body').hasClass('body-homepage')) {
+    var header=$('header');
+    header.addClass('screen-top-homepage');
+        window.onscroll = function () {
+            if (((window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop) == 0) {
+                header.addClass('screen-top-homepage');
+            }
+            else{
+                header.removeClass('screen-top-homepage');
+            }
+        };
+    }
 });
