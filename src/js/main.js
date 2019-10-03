@@ -6,6 +6,7 @@
 //= libs/TweenMax.min.js
 //= libs/swiper.min.js
 //= libs/tooltipster.bundle.min.js
+//= libs/slick.min.js
 /* my scripts */
 
 //= partials/main.js

@@ -6,7 +6,7 @@ $(document).ready(function () {
 
         var homepageFWSwiper = new Swiper('.full-width-slider .swiper-container', {
             loop: true,
-             pagination: {
+            pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
@@ -18,19 +18,58 @@ $(document).ready(function () {
     }
 
     //section catalog
-    console.log($('.catalog .tabs .item .title').siblings('.invisible-refs').html());
-   $('.catalog .tabs .item .title').each(function () {
+    $('.catalog .tabs .item .title').each(function () {
 
         $(this).tooltipster({
             animation: 'fade',
             delay: 200,
-            content:$(this).siblings('.invisible-refs').html(),
+            content: $(this).siblings('.invisible-refs').html(),
             contentAsHTML: true,
-            trigger: 'click',
-            arrow:false,
+            //trigger: 'click',
+            arrow: false,
             side: 'bottom',
             theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
             interactive: true
-         });
+        });
     });
+
+    $('.catalog .tab-controls .item').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.catalog .tabs .tab.active').removeClass('active').siblings().addClass('active');
+    });
+
+    //section predstavitelstva
+
+    $('.predstavitelstva .map .points .point').each(function () {
+
+        $(this).tooltipster({
+            animation: 'fade',
+            delay: 200,
+            content: $(this).next('.hidden-text').html(),
+            contentAsHTML: true,
+            arrow: true,
+            side: 'top',
+            theme: ['tooltipster-borderless', 'tooltipster-map-points-customized'],
+            interactive: true,
+            distance: 6,
+            maxWidth: 262,
+        });
+    });
+
+
+    //section news
+    if ($('.news-homepage').length > 0) {
+        $('.news-homepage .slick-wrapper').slick({
+            arrows: false,
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            loop: true,
+            variableWidth: true,
+
+            speed: 300,
+            //autoplay: true,
+        });
+
+    }
 });
