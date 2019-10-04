@@ -1,8 +1,11 @@
 .body-homepage {
     background: #1333a4 url(../img/background.jpg) no-repeat top center;
     background-size: 100% auto;
+
+    overflow-x: hidden;
 }
-@media (min-width:1525px){
+
+@media (min-width:1525px) {
     .body-homepage {
         header.screen-top-homepage {
             background: none;
@@ -38,7 +41,7 @@
             padding-top: 85px;
 
             .left {
-                flex-grow: 1;
+                width: 59%;
 
                 .title {
                     font-size: 50px;
@@ -75,21 +78,17 @@
 
 
             .right {
-                .circle {
-                    width: 470px;
-                    height: 470px;
-                    background-color: #f7f8f9;
-                    position: relative;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                }
+                width: 41%;
+                margin-top: -6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
 
                 img {
-                    width: calc(100% - 66px);
-                    left: 33px;
-                    bottom: 43px;
-                    position: absolute;
+                    max-width: 100%;
+                    height: auto;
+                    width: 100%;
                 }
             }
 
@@ -111,7 +110,8 @@
             margin: 0 8px;
         }
 
-        .swiper-pagination-bullet-active {
+        .swiper-pagination-bullet-active,
+        .swiper-pagination-bullet:hover {
             background-color: #ea961c;
             opacity: 1;
         }
@@ -325,8 +325,9 @@
                     margin-left: 10px;
                     transition-duration: .2s;
                 }
-                &:hover{
-                    &::after{
+
+                &:hover {
+                    &::after {
                         transform: rotate(180deg);
                     }
                 }
@@ -410,10 +411,14 @@
             line-height: 62px;
             padding: 10px 0 0 1.9%;
 
-            img {}
+            img {
+                max-width: 100%;
+                height: auto;
+            }
         }
 
         .right {
+            width: 49%;
             padding-left: 12.1%;
 
             .title {
@@ -713,6 +718,7 @@
 
 .news-homepage {
     margin-top: -200px;
+    padding-bottom: 64px;
 
 
     .slick-container {
@@ -750,6 +756,13 @@
                 background-size: cover;
             }
 
+            .type {
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
             .big-slide {
                 width: 553px - 30px !important;
                 height: 370px - (27px * 2);
@@ -766,7 +779,8 @@
                     right: 0;
                     bottom: 0;
                     z-index: -1;
-                    &::after{
+
+                    &::after {
                         content: '';
                         display: block;
                         left: 0;
@@ -799,7 +813,8 @@
                     line-height: 26px;
                     margin-top: 9px;
                     text-decoration: none;
-                    &:hover{
+
+                    &:hover {
                         text-decoration: underline;
                     }
                 }
@@ -847,7 +862,8 @@
                     padding: 0 21px;
                     margin-bottom: 9px;
                     text-decoration: none;
-                    &:hover{
+
+                    &:hover {
                         text-decoration: underline;
                     }
                 }
@@ -882,6 +898,7 @@
                 display: none;
             }
 
+            cursor: pointer;
             display: block;
             margin: 0 8px;
             width: 14px;
@@ -904,8 +921,9 @@
 
 
 .parthners-homepage {
-    padding-top: 114px;
-
+    padding-top: 48px;
+    background-color: #0d2782;
+    width: 100%;
     .top {
         .title {}
 
@@ -934,4 +952,883 @@
             img {}
         }
     }
+}
+
+@media (max-width:1400px) {
+
+    .full-width-slider .swiper-button-prev-c,
+    .full-width-slider .swiper-button-next-c {
+        display: none;
+    }
+}
+
+@media (max-width:1200px) {
+
+    .full-width-slider {
+        .swiper-container {
+            .swiper-wrapper {}
+
+            .swiper-slide {
+                padding-top: 36px;
+                padding-bottom: 43px;
+
+                .left {
+                    width: 52%;
+
+                    .title {
+                        font-size: 32px;
+                        font-weight: 400;
+                        line-height: 42px;
+
+                        a {
+                            &:hover {}
+
+                            &:active {}
+
+                            &:focus {}
+                        }
+                    }
+
+                    .description {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        margin-top: 15px;
+                    }
+
+                    .btn-orange {
+                        margin-top: 40px;
+                    }
+                }
+
+                .right {
+                    width: 48%;
+                    margin-top: 22px;
+
+
+                    img {}
+                }
+            }
+        }
+
+        .swiper-pagination {
+            bottom: 0;
+            margin-left: 0
+        }
+
+        .swiper-pagination {
+            .swiper-pagination-bullet {}
+
+            .swiper-pagination-bullet-active {}
+        }
+
+        .swiper-button-prev-c,
+        .swiper-button-next-c {
+            svg {}
+
+            &:hover {
+                .cls-1 {}
+            }
+        }
+
+        .swiper-button-prev-c {}
+
+        .swiper-button-next-c {}
+    }
+
+    .catalog {
+        margin-top: 66px;
+
+        .catalog-wrap {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 0;
+        }
+
+        .top {
+            padding: 46px 26px 0 32px;
+
+            >.title {
+                font-size: 30px;
+                line-height: 38px;
+                margin: 0px 0 0 -5px;
+            }
+
+            .tab-controls {
+                padding-right: 0;
+
+                .item {
+                    font-size: 14px;
+                    line-height: 34px;
+
+                    &::after {
+                        margin: 0px 20px;
+                    }
+
+                    &:last-child::after {}
+
+                    svg {}
+
+                    path {}
+
+                    &.active {}
+
+                    &.active,
+                    &:hover {
+                        path {}
+
+                        span {}
+
+                        span::after {
+                            bottom: 8px;
+                        }
+                    }
+                }
+            }
+
+            .all-catalog {
+                font-size: 14px;
+                line-height: 34px;
+
+                &:hover {}
+
+                svg {
+                    .cls-1 {}
+                }
+
+                &:active {}
+
+                &:focus {}
+            }
+        }
+
+        .tabs {
+            padding: 27px 0 46px 29px;
+
+            .tab {
+                &.active {}
+
+                .item,
+                .item:nth-child(3n-1),
+                .item:nth-child(3n) {
+                    width: calc(50% - 30px);
+                    padding: 0;
+                    margin: 0;
+                    padding-right: 30px;
+                }
+
+                .title {
+                    font-size: 14px;
+                    line-height: 34px;
+
+                    &::after {}
+
+                    &:hover {
+                        &::after {}
+                    }
+                }
+
+                .invisible-refs {
+                    .title {}
+
+                    a {
+                        &:hover {}
+
+                        &:active {}
+
+                        &:focus {}
+                    }
+                }
+            }
+        }
+    }
+
+    .tooltipster-noir.tooltipster-noir-customized.tooltipster-base.tooltipster-sidetip {
+        .tooltipster-box {
+            .tooltipster-content {
+                .title {
+                    font-size: 14px;
+                    line-height: 34px;
+                }
+
+                a {
+                    font-size: 14px;
+                    line-height: 34px;
+
+                    &:hover {}
+
+                    &:active {}
+
+                    &:focus {}
+                }
+            }
+        }
+
+        .tooltipster-arrow {
+            .tooltipster-arrow-uncropped {
+                .tooltipster-arrow-border {}
+
+                .tooltipster-arrow-background {}
+            }
+        }
+    }
+
+    .about-company {
+        margin-top: 50px;
+
+        .container {
+            .left {
+                padding: 57px 0 0;
+
+                img {}
+            }
+
+            .right {
+                padding-left: 4.2%;
+                width: 60.2%;
+
+                .title {
+                    font-size: 30px;
+                    line-height: 62px;
+                    margin-left: -3px;
+                    margin-bottom: 8px;
+                }
+
+                .text {
+                    font-size: 14px;
+                    line-height: 24px;
+                    padding-right: 10px;
+                }
+
+                .btn-orange {
+                    margin-top: 39px;
+                    margin-left: -1px;
+
+                    &:hover {}
+
+                    &:active {}
+
+                    &:focus {}
+                }
+            }
+        }
+    }
+
+    .predstavitelstva .container {
+        padding-top: 67px;
+
+        .left {
+            padding-top: 0;
+
+            .title {
+                font-size: 30px;
+                line-height: 36px;
+                margin-bottom: 18px;
+            }
+
+            .text {
+                font-size: 14px;
+                line-height: 24px;
+                margin-left: -2px;
+                margin-bottom: 39px;
+            }
+
+            .btn-blue {}
+        }
+
+        .right {
+            height: 404px;
+            margin-top: 106px;
+
+            .map {
+                height: 100%;
+                width: 822px;
+
+                .cls-2,
+                .cls-3 {}
+
+                .points {
+                    .hidden-text {}
+
+                    .point {
+
+                        .mark {
+                            width: 9px;
+                            height: 11px;
+
+                            svg {}
+                        }
+
+                        .name {
+                            font-size: 12px;
+                            line-height: 12px;
+                            left: 15px;
+                            top: 3px;
+                        }
+
+                        &:hover {
+                            .mark {
+                                width: 16px;
+                                height: 20px;
+
+                                svg {
+                                    path {}
+
+                                    circle,
+                                    .cls-3 {}
+                                }
+                            }
+
+                            .name {
+                                left: 21px;
+                                top: -8px;
+                            }
+                        }
+
+                        &-spb {
+                            &:hover {}
+                        }
+
+                        &-dz {
+                            &:hover {
+                                left: 16.1%
+                            }
+                        }
+
+                        &-kras {
+                            bottom: 33.4%;
+
+                            &:hover {}
+                        }
+
+                        &-ekb {
+                            &:hover {}
+                        }
+
+                        &-nn {
+                            bottom: 44.5%;
+
+                            &:hover {}
+                        }
+
+                        &-sam {
+                            &:hover {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tooltipster-map-points-customized {
+        .tooltipster-box {
+            .tooltipster-content {
+                a {
+                    line-height: 20px;
+                    font-weight: 400;
+
+                    &:hover {}
+
+                    &:active {}
+
+                    &:focus {}
+                }
+            }
+        }
+
+        .tooltipster-arrow {
+            .tooltipster-arrow-background {}
+
+            .tooltipster-arrow-border {}
+        }
+    }
+
+    .news-homepage .top,
+    .parthners-homepage .top {
+        .title {
+            font-size: 30px;
+            line-height: 36px;
+        }
+
+        .all {
+            font-size: 14px;
+            line-height: 34px;
+
+            &:hover {}
+
+            &::after {
+                top: 12px;
+            }
+        }
+    }
+
+    .news-homepage {
+        margin-top: -39px;
+
+        padding-bottom: 54px;
+
+        .slick-container {
+            margin-top: 27px;
+
+            .slick-wrapper {
+                .slick-list {
+                    padding-top: 0;
+                }
+
+                .slick-slide {
+
+                    &:hover {
+                        margin-top: 0;
+                    }
+                }
+
+                .pic {}
+
+                .big-slide {
+                    width: 456px - 15px - 20px !important;
+                    height: 343px - 26px;
+
+                    padding: 0 15px 26px 20px;
+
+                    .pic {
+                        &::after {}
+                    }
+
+                    .type {
+                        font-size: 12px;
+                        line-height: 20px;
+                        padding: 0 5px;
+                    }
+
+                    .title {
+                        font-size: 14px;
+                        line-height: 22px;
+
+                        max-width: 259px;
+
+                        &:hover {}
+                    }
+
+                    .date {
+                        font-size: 12px;
+                        line-height: 14px;
+                        margin-top: 20px;
+                    }
+                }
+
+                .small-slide {
+                    width: 215px !important;
+                    height: 343px;
+
+                    .pic {
+                        height: 142px;
+                        margin-bottom: 22px;
+                    }
+
+                    .type {
+                        font-size: 12px;
+                        line-height: 20px;
+                        margin-bottom: 7px;
+
+                    }
+
+                    .title {
+                        font-size: 14px;
+                        line-height: 22px;
+
+                        &:hover {}
+                    }
+
+                    .date {
+                        font-size: 12px;
+                        line-height: 12px;
+                        padding: 0 18px;
+                        padding-bottom: 28px;
+                    }
+                }
+            }
+        }
+
+        .slick-dots {
+            margin: 42px 0px 0 -2px;
+            li {
+                button {}
+
+                &:hover,
+                &.slick-active {}
+            }
+        }
+    }
+
+    .parthners-homepage {
+        .top {
+            .title {}
+
+            .all {
+                &:hover {}
+
+                &:active {}
+
+                &:focus {}
+            }
+        }
+
+        .parthners-container {
+
+    padding: 24px 14px 0 19px;
+    max-height: 107px;
+            .parthner {
+                img {}
+            }
+        }
+    }
+
+}
+
+@media (max-width:1200px) {
+
+    .full-width-slider {
+        .swiper-container {
+            .swiper-wrapper {}
+
+            .swiper-slide {
+                .left {
+                    .title {
+                        a {
+                            &:hover {}
+
+                            &:active {}
+
+                            &:focus {}
+                        }
+                    }
+
+                    .description {}
+
+                    .btn-orange {}
+                }
+
+                .right {
+                    .circle {}
+
+                    img {}
+                }
+            }
+        }
+
+        .swiper-pagination {}
+
+        .swiper-pagination {
+            .swiper-pagination-bullet {}
+
+            .swiper-pagination-bullet-active {}
+        }
+
+        .swiper-button-prev-c,
+        .swiper-button-next-c {
+            svg {}
+
+            &:hover {
+                .cls-1 {}
+            }
+        }
+
+        .swiper-button-prev-c {}
+
+        .swiper-button-next-c {}
+    }
+
+    .catalog {
+        .catalog-wrap {}
+
+        .top {
+            >.title {}
+
+            .tab-controls {
+                .item {
+                    &::after {}
+
+                    &:last-child::after {}
+
+                    svg {}
+
+                    path {}
+
+                    &.active {}
+
+                    &.active,
+                    &:hover {
+                        path {}
+
+                        span {}
+
+                        span::after {}
+                    }
+                }
+            }
+
+            .all-catalog {
+                &:hover {}
+
+                svg {
+                    .cls-1 {}
+                }
+
+                &:active {}
+
+                &:focus {}
+            }
+        }
+
+        .tabs {
+            .tab {
+                &.active {}
+
+                .item {
+                    &:nth-child(3n-1) {}
+
+                    a &:nth-child(3n) {}
+                }
+
+                .title {
+                    &::after {}
+
+                    &:hover {
+                        &::after {}
+                    }
+                }
+
+                .invisible-refs {
+                    .title {}
+
+                    a {
+                        &:hover {}
+
+                        &:active {}
+
+                        &:focus {}
+                    }
+                }
+            }
+        }
+    }
+
+    .tooltipster-noir.tooltipster-noir-customized.tooltipster-base.tooltipster-sidetip {
+        .tooltipster-box {
+            .tooltipster-content {
+                .title {}
+
+                a {
+                    &:hover {}
+
+                    &:active {}
+
+                    &:focus {}
+                }
+            }
+        }
+
+        .tooltipster-arrow {
+            .tooltipster-arrow-uncropped {
+                .tooltipster-arrow-border {}
+
+                .tooltipster-arrow-background {}
+            }
+        }
+    }
+
+    .about-company {
+        .container {
+            .left {
+                img {}
+            }
+
+            .right {
+                .title {}
+
+                .text {}
+
+                .btn-orange {
+                    &:hover {}
+
+                    &:active {}
+
+                    &:focus {}
+                }
+            }
+        }
+    }
+
+    .predstavitelstva .container {
+        .left {
+            .title {}
+
+            .text {}
+
+            .btn-blue {}
+        }
+
+        .right {
+            .map {
+                svg {}
+
+                .cls-2,
+                .cls-3 {}
+
+                .points {
+                    .hidden-text {}
+
+                    .point {
+                        * {}
+
+                        .mark {
+                            svg {}
+                        }
+
+                        .name {}
+
+                        &:hover {
+                            .mark {
+                                svg {
+                                    path {}
+
+                                    circle,
+                                    .cls-3 {}
+                                }
+                            }
+
+                            .name {}
+                        }
+
+                        &-spb {
+                            &:hover {}
+                        }
+
+                        &-dz {
+                            &:hover {
+                                left: 16.1%
+                            }
+                        }
+
+                        &-kras {
+                            &:hover {}
+                        }
+
+                        &-ekb {
+                            &:hover {}
+                        }
+
+                        &-nn {
+                            &:hover {}
+                        }
+
+                        &-sam {
+                            &:hover {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tooltipster-map-points-customized {
+        .tooltipster-box {
+            .tooltipster-content {
+                a {
+                    &:hover {}
+
+                    &:active {}
+
+                    &:focus {}
+                }
+            }
+        }
+
+        .tooltipster-arrow {
+            .tooltipster-arrow-background {}
+
+            .tooltipster-arrow-border {}
+        }
+    }
+
+    .news-homepage .top,
+    .parthners-homepage .top {
+        .title {}
+
+        .all {
+            &:hover {}
+
+            &::after {}
+        }
+    }
+
+    .news-homepage {
+        .slick-container {
+            .slick-wrapper {
+                .slick-list {}
+
+                .slick-slide {
+                    &:hover {}
+                }
+
+                .pic {}
+
+                .big-slide {
+                    .pic {
+                        &::after {}
+                    }
+
+                    .type {}
+
+                    .title {
+                        &:hover {}
+                    }
+
+                    .date {}
+                }
+
+                .small-slide {
+                    .pic {}
+
+                    .type {}
+
+                    .title {
+                        &:hover {}
+                    }
+
+                    .date {}
+                }
+            }
+        }
+
+        .slick-dots {
+            li {
+                button {}
+
+                &:hover,
+                &.slick-active {}
+            }
+        }
+    }
+
+    .parthners-homepage {
+        .top {
+            .title {}
+
+            .all {
+                &:hover {}
+
+                &:active {}
+
+                &:focus {}
+            }
+        }
+
+        .parthners-container {
+            .parthner {
+                img {}
+            }
+        }
+    }
+
 }
