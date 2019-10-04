@@ -1,12 +1,28 @@
 .page-404{
+  font-size: 16px;
+  line-height: 26px;
 
+  a{
+    border-bottom: 1px solid #455bd7;
+    color: #455bd7;
+
+    &:hover{
+      border-color: transparent;
+    }
+  }
 
   .logo-404{
     font-size: 150px;
     line-height: 150px;
     text-align: center;
-    font-family: 'Montserrat';
     color: #1333a4;
+
+    b{
+      font-weight: 800;
+      font-family: 'Montserrat';
+      position: relative;
+      z-index: 1;
+    }
 
     span{
       position: relative;
@@ -16,6 +32,7 @@
       vertical-align: middle;
       margin-left: 10px;
       margin-right: 10px;
+      margin-top: -30px;
 
       &:after{
         content: '';
@@ -24,9 +41,15 @@
         height: 451px;
         background: url("../img/404.svg") no-repeat;
         background-size: 100% auto;
-        right:-90px;
+        right:-87px;
         bottom: -87px;
       }
     }
+  }
+
+  .pagetitle{
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
   }
 }

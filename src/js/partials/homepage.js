@@ -14,6 +14,7 @@ $(document).ready(function () {
                 nextEl: '.swiper-button-next-c',
                 prevEl: '.swiper-button-prev-c',
             },
+
         })
     }
 
@@ -53,6 +54,15 @@ $(document).ready(function () {
             interactive: true,
             distance: 6,
             maxWidth: 262,
+            functionPosition: function (instance, helper, position) {
+
+                //position.coord.top += -20;
+                if (document.documentElement.clientWidth > 1460) {
+                    position.coord.left += 95;
+                }
+                return position;
+            },
+
         });
     });
 
