@@ -1,26 +1,30 @@
 .body-homepage {
-    header.screen-top-homepage {
-        background: none;
+    background: #1333a4 url(../img/background.jpg) no-repeat top center;
+    background-size: 100% auto;
+}
+@media (min-width:1525px){
+    .body-homepage {
+        header.screen-top-homepage {
+            background: none;
 
-        .page-header {
-            &__lang {
+            .page-header {
+                &__lang {
 
-                li {
-                    border-right: 1px solid #8aa3ff;
-                    color: #ffffff;
-                }
+                    li {
+                        border-right: 1px solid #8aa3ff;
+                        color: #ffffff;
+                    }
 
-                a {
-                    text-decoration: underline;
-                    color: #8aa3ff;
+                    a {
+                        text-decoration: underline;
+                        color: #8aa3ff;
+                    }
                 }
             }
         }
     }
-
-    background: #1333a4 url(../img/background.jpg) no-repeat top center;
-    background-size: 100% auto;
 }
+
 
 .full-width-slider {
     position: relative;
@@ -119,6 +123,7 @@
         height: 50px;
         border-radius: 25px;
         border: 2px solid #d6d6d6;
+        background: #fff;
         position: absolute;
         top: 40.8%;
         box-sizing: border-box;
@@ -318,6 +323,12 @@
                     display: inline-block;
                     background-size: auto 100%;
                     margin-left: 10px;
+                    transition-duration: .2s;
+                }
+                &:hover{
+                    &::after{
+                        transform: rotate(180deg);
+                    }
                 }
             }
 
@@ -472,7 +483,7 @@
         position: relative;
 
         .map {
-            width: 1439px;
+            width: 1441px;
             position: absolute;
             left: 0;
             left: 35px;
@@ -488,10 +499,27 @@
             }
 
             .points {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+
+                .hidden-text {
+                    display: none;
+                }
 
                 .point {
                     position: absolute;
                     display: flex;
+                    align-items: center;
+
+                    transition-duration: .5s;
+
+                    * {
+                        transition-duration: .5s;
+
+                    }
 
                     .mark {
                         width: 17px;
@@ -505,10 +533,13 @@
                     }
 
                     .name {
+                        position: absolute;
                         color: #ffffff;
                         font-size: 16px;
                         font-weight: 700;
                         line-height: 16px;
+                        left: 17px + 9px;
+                        white-space: nowrap;
                     }
 
                     &:hover {
@@ -530,22 +561,377 @@
 
                         .name {
                             color: #ea961c;
+
+                            line-height: 36px;
+                            left: 29px + 9px;
                         }
                     }
 
-                    &-spb {}
+                    &-spb {
+                        bottom: 67.4%;
+                        left: 15%;
 
-                    &-dz {}
+                        &:hover {
+                            left: 14.6%;
+                        }
+                    }
 
-                    &-kras {}
+                    &-dz {
+                        bottom: 49%;
+                        left: 16.5%;
 
-                    &-ekb {}
+                        &:hover {
+                            left: 16.1%
+                        }
+                    }
 
-                    &-nn {}
+                    &-kras {
+                        left: 3.7%;
+                        bottom: 36.4%;
 
-                    &-sam {}
+                        &:hover {
+                            left: 3.3%;
+                        }
+
+                    }
+
+                    &-ekb {
+                        bottom: 36%;
+                        left: 28%;
+
+                        &:hover {
+                            left: 27.6%;
+                        }
+                    }
+
+                    &-nn {
+                        bottom: 46.5%;
+                        left: 17.5%;
+
+                        &:hover {
+                            left: 17.1%;
+                        }
+                    }
+
+                    &-sam {
+                        bottom: 36.8%;
+                        left: 18.5%;
+
+                        &:hover {
+                            left: 18.1%;
+                        }
+                    }
                 }
             }
+        }
+    }
+}
+
+
+.tooltipster-map-points-customized {
+
+    .tooltipster-box {
+        border-radius: 10px;
+        background-color: #ea961c;
+        border: 0;
+
+        .tooltipster-content {
+            padding: 13px 14px;
+
+            a {
+                color: #ffffff;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                &:active {}
+
+                &:focus {}
+            }
+        }
+    }
+
+    .tooltipster-arrow {
+        .tooltipster-arrow-background {
+            border-top-color: #ea961c;
+        }
+
+        .tooltipster-arrow-border {
+            border-top-color: #ea961c;
+        }
+    }
+}
+
+
+
+.news-homepage .top,
+.parthners-homepage .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 62px;
+    }
+
+    .all {
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        padding-right: 19px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 7px;
+            height: 10px;
+            background: url('../img/arr-right-hover.svg');
+            right: 1px;
+            top: 3px;
+        }
+
+    }
+}
+
+
+.news-homepage {
+    margin-top: -200px;
+
+
+    .slick-container {
+        margin-top: 14px;
+
+        .slick-wrapper {
+            overflow-x: hidden;
+            overflow-y: visible;
+            position: relative;
+
+            .slick-list {
+                overflow: visible;
+                padding-top: 10px;
+            }
+
+            .slick-slide {
+                margin-top: 10px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 15px;
+                margin: 0 15px;
+                transition-duration: .5s;
+
+                &:hover {
+                    margin-top: -10px;
+                    box-shadow: 0 30px 20px rgba(9, 32, 61, 0.15);
+
+                }
+
+            }
+
+            .pic {
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .big-slide {
+                width: 553px - 30px !important;
+                height: 370px - (27px * 2);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                padding: 27px 0 27px 30px;
+
+                .pic {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: -1;
+                    &::after{
+                        content: '';
+                        display: block;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: url('../img/bg-news.png');
+                        background-repeat: no-repeat;
+                        background-position: center bottom;
+                        background-size: 100% 282px;
+                    }
+                }
+
+                .type {
+                    border-radius: 2px;
+                    background-color: #ea961c;
+                    display: block;
+                    color: #ffffff;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    padding: 0 6px;
+                    display: inline-block;
+                }
+
+                .title {
+                    color: #ffffff;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 26px;
+                    margin-top: 9px;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+
+                .date {
+                    color: #cccccc;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    margin-left: 7px;
+                    margin-top: 12px;
+                }
+            }
+
+            .small-slide {
+                width: 263px !important;
+                height: 370px;
+                border-radius: 15px;
+                background-color: #455bd7;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                .pic {
+                    height: 176px;
+                    width: 100%;
+                    margin-bottom: 29px;
+                }
+
+
+                .type {
+                    color: #ffffff;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 14px;
+                    padding: 0 21px;
+                    margin-bottom: 17px;
+                }
+
+                .title {
+                    color: #ffffff;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 26px;
+                    padding: 0 21px;
+                    margin-bottom: 9px;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+
+                .date {
+                    flex-grow: 1;
+                    display: flex;
+                    align-items: flex-end;
+                    color: #b2b9ec;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 14px;
+                    padding: 0 21px;
+                    padding-bottom: 32px;
+                }
+
+            }
+        }
+
+    }
+
+    .slick-dots {
+        margin: 53px -8px 0;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+
+        margin-top: 53px;
+
+        li {
+            button {
+                display: none;
+            }
+
+            display: block;
+            margin: 0 8px;
+            width: 14px;
+            height: 14px;
+            background-color: #ffffff;
+            opacity: 0.15;
+            border-radius: 50%;
+
+            &:hover,
+            &.slick-active {
+                background-color: #ea961c;
+                opacity: 1;
+
+            }
+        }
+    }
+
+
+}
+
+
+.parthners-homepage {
+    padding-top: 114px;
+
+    .top {
+        .title {}
+
+        .all {
+            &:hover {}
+
+            &:active {}
+
+            &:focus {}
+        }
+    }
+
+    .parthners-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        max-height: 120px;
+        overflow: hidden;
+        padding: 21px 5px 0 11px;
+        margin: 0 -30px;
+
+        .parthner {
+            margin: 0 30px 60px;
+
+            img {}
         }
     }
 }
