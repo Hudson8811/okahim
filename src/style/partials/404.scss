@@ -1,9 +1,11 @@
 .page-404{
   overflow:hidden;
-  font-size: 16px;
-  line-height: 26px;
   padding-top: 106px;
   margin-top: 0;
+
+  &.text-style p+p{
+    margin-top: 0;
+  }
 
   a{
     border-bottom: 1px solid #455bd7;

@@ -349,3 +349,6 @@ Array.prototype.forEach.call( inputs, function( input )
     });
 
 });
+$(document).ready(function() {
+
+});

@@ -1,0 +1,70 @@
+.jobs-page{
+  .pagetitle{
+    margin-bottom: 63px;
+  }
+
+  .bg_block{
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    margin-left: -50px;
+    margin-right: -50px;
+    padding: 107px 165px 115px 100px;
+    background-color: #1a38ad;
+    color: #fff;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 64px;
+
+    .h2{
+      margin-bottom: 30px;
+    }
+  }
+
+  .block{
+    background: #f7f8f9;
+    padding: 46px 50px 52px 50px;
+
+    &:first-child{
+      -webkit-border-radius: 14px 14px 0 0;
+      -moz-border-radius: 14px 14px 0 0;
+      border-radius: 14px 14px 0 0;
+    }
+
+    &:last-child{
+      -webkit-border-radius: 0 0 14px 14px;
+      -moz-border-radius: 0 0 14px 14px;
+      border-radius: 0 0 14px 14px;
+    }
+
+    & + .block{
+      border-top: 1px solid #e6e6e7;
+    }
+    
+    .city{
+      font-size: 14px;
+      color: #455bd7;
+      margin-bottom: 10px;
+    }
+
+    h3{
+      margin-top: 0;
+      margin-bottom: 28px;
+    }
+
+    h4{
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    ul{
+      margin-bottom: 24px;
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width:600px) {
+
+}
