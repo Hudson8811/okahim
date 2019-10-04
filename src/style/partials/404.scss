@@ -1,0 +1,32 @@
+.page-404{
+
+
+  .logo-404{
+    font-size: 150px;
+    line-height: 150px;
+    text-align: center;
+    font-family: 'Montserrat';
+    color: #1333a4;
+
+    span{
+      position: relative;
+      width: 120px;
+      height: 120px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      &:after{
+        content: '';
+        width:445px;
+        position: absolute;
+        height: 451px;
+        background: url("../img/404.svg") no-repeat;
+        background-size: 100% auto;
+        right:-90px;
+        bottom: -87px;
+      }
+    }
+  }
+}
