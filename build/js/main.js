@@ -106,8 +106,20 @@ $(document).ready(function () {
         }
     }
 
+
+    function adaptiveHbtn() {
+        if ($('.page-header__online-req-btn span').first().is(':visible')) {
+            $('.page-header__online-req-btn').addClass('btn-orange');
+        }
+        else {
+            $('.page-header__online-req-btn').removeClass('btn-orange');
+        }
+    }
+
+
     var pffh = $('.padding-for-fixed-header');
     pffh.attr('style', 'padding-top:' + $("header").height() + 'px');
+    adaptiveHbtn();
     $(window).resize(function () {
         if (!burger.is(':visible')) {
             hMenu.attr('style', '');
@@ -123,6 +135,9 @@ $(document).ready(function () {
         }
 
         pffh.attr('style', 'padding-top:' + $("header").height() + 'px');
+
+
+        adaptiveHbtn();
     });
 
 
@@ -130,17 +145,29 @@ $(document).ready(function () {
     //for homepage
 
     if ($('body').hasClass('body-homepage')) {
-    var header=$('header');
-    header.addClass('screen-top-homepage');
+        var header = $('header');
+        header.addClass('screen-top-homepage');
         window.onscroll = function () {
             if (((window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop) == 0) {
                 header.addClass('screen-top-homepage');
             }
-            else{
+            else {
                 header.removeClass('screen-top-homepage');
             }
         };
     }
+
+
+
+
+
+
+    $('.page-header__online-req-btn').click(function () {
+        $.fancybox.open({
+            src: '#online-req-modal',
+            type: 'inline'
+        });
+    });
 });
 
 $('body').append('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters"><defs><filter id="filter-goo"><feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" /><feComposite in="SourceGraphic" in2="goo" /></filter></defs></svg>');

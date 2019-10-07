@@ -4,8 +4,17 @@
 
     overflow-x: hidden;
 }
+@media (min-width:2000px) {
+    .full-width-slider .swiper-button-prev-c {
+        left: calc(50% - 725px) !important;
+    }
+    .full-width-slider .swiper-button-next-c{
+        right: calc(50% - 725px) !important;
+    }
+}
 
-@media (min-width:1525px) {
+
+@media (min-width:1525px) and (max-width:2060px) {
     .body-homepage {
         header.screen-top-homepage {
             background: none;
@@ -32,6 +41,11 @@
 .full-width-slider {
     position: relative;
 
+    .container{
+        width: 1170px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
     .swiper-container {
         .swiper-wrapper {}
 
@@ -42,6 +56,7 @@
 
             .left {
                 width: 59%;
+                padding-left: 30px;
 
                 .title {
                     font-size: 50px;
@@ -79,6 +94,7 @@
 
             .right {
                 width: 41%;
+                padding-right: 30px;
                 margin-top: -6px;
                 display: flex;
                 justify-content: center;
@@ -1498,6 +1514,15 @@
 
 }
 
+
+@media (max-width:900px) {
+    .body-homepage {
+        background: #1333a4 url(../img/background.jpg) no-repeat top center;
+        background-size: 1920px auto;
+    }
+}
+
+
 @media (max-width:780px) {
 
     .full-width-slider {
@@ -1508,7 +1533,7 @@
                 padding-left: 2.5px;
 
                 .left {
-                    width: 100%;
+                    width: calc(100% - 60px);
 
                     .title {
                         font-size: 22px;
@@ -1888,54 +1913,64 @@
 
 
 @media (max-width:374px) {
-    .news-homepage .top, .parthners-homepage .top {
+
+    .news-homepage .top,
+    .parthners-homepage .top {
         max-width: calc(100% - 50px);
     }
+
     .predstavitelstva .container .left .title {
         font-size: 25px;
     }
-    .news-homepage .top .title, .parthners-homepage .top .title {
+
+    .news-homepage .top .title,
+    .parthners-homepage .top .title {
         font-size: 25px;
     }
 
-    .news-homepage .top .all, .parthners-homepage .top .all {
+    .news-homepage .top .all,
+    .parthners-homepage .top .all {
         padding-right: 13px;
     }
+
     .catalog .top .tab-controls {
         display: block;
 
         .item {
             display: flex;
             justify-content: center;
-            &:after{
+
+            &:after {
                 content: none;
             }
         }
     }
+
     .catalog .tabs .tab .title {
         font-size: 14px;
         line-height: 17px;
         margin-bottom: 13px;
     }
 
-    .predstavitelstva .container .right .map .points .point .name{
+    .predstavitelstva .container .right .map .points .point .name {
         font-size: 12px;
         line-height: 12px;
         left: -22px;
         top: -8px;
     }
 
-    .predstavitelstva .container .right .map .points .point:hover .name{
+    .predstavitelstva .container .right .map .points .point:hover .name {
         font-size: 12px;
-    line-height: 12px;
-    left: -22px;
-    top: -13px;
+        line-height: 12px;
+        left: -22px;
+        top: -13px;
     }
 
     .parthners-homepage .parthners-container {
         padding: 24px 15px 0;
         margin: 0 -15px;
     }
+
     .parthners-homepage .parthners-container .parthner {
         margin: 0 12px 60px;
     }
