@@ -405,3 +405,6 @@ if ($('.contacts-block').length > 0) {
 }
     )
 }
+$(document).ready(function() {
+
+});
