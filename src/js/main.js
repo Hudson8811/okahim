@@ -16,3 +16,4 @@
 //= partials/input.file.js
 //= partials/jobs.js
 //= partials/product.js
+//= partials/contacts.js

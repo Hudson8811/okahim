@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Тайтл</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+    
+    <header class="header_with-box-shadow">
+        <div class="page-header">
+            <div class="page-header__top-line">
+                <div class="page-header__burger">
+                    <span></span>
+                </div>
+                <a href="" class="page-header__logo">
+                    <img class="page-header__logo-img-desktop" src="img/header-logo.svg" alt="">
+                    <img class="page-header__logo-img-mob" src="img/header-logo-mobile.svg" alt="">
+                </a>
+                <div class="page-header__search">
+                    <input type="text" placeholder="Поиск по сайту">
+                    <div class="page-header__search-btn"><img src="img/search.png" alt=""></div>
+                </div>
+                <div class="page-header__phone-numbers">
+                    <div class="page-header__phone-numbers-visible">
+                        <div class="page-header__main-phone">+7 800 321-54-76</div>
+                        <div class="page-header__phones-desc">Бесплатно по Росии</div>
+                    </div>
+                    <div class="page-header__another-phones">
+                        <div class="city">Дзержинск
+                        </div>
+                        <div class="number">+7 (8313) 31-01-55</div>
+                        <div class="city">Екатеринбург
+                        </div>
+                        <div class="number">+7 (343) 286-82-97</div>
+                        <div class="city">Н.Новгород
+                        </div>
+                        <div class="number">+7 (831) 274-88-26</div>
+                        <div class="city">Самара
+                        </div>
+                        <div class="number">+7 (846) 276-99-93</div>
+                        <div class="city">Краснодар
+                        </div>
+                        <div class="number">+7 (861) 290-86-68</div>
+                        <div class="city">Санкт-Петербург
+                        </div>
+                        <div class="number">+7 (812) 407-71-60</div>
+                    </div>
+                </div>
+                <a href="" class="btn page-header__online-req-btn"><span>Онлайн заявка</span></a>
+            </div>
+            <div class="page-header__bottom-line">
+                <div class="page-header__menu">
+                    <ul>
+                        <li><a href="" class="active">Компания</a></li>
+                        <li><a href="">Каталог продукции</a></li>
+                        <li><a href="">Доставка</a></li>
+                        <li><a href="">Новости</li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="page-header__lang">
+                    <ul>
+                        <li>Рус</li>
+                        <li><a href="">Eng</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="padding-for-fixed-header"></div>
+
+
+    <main class="page-content contacts-page">
+        <div class="container">
+
+            <div class="bread">
+                <a href="">Главная</a>
+                <span class="sep">&raquo;</span>
+                <a href="">Пункт 1</a>
+                <span class="sep">&raquo;</span>
+                <span class="current">Текущий пункт</span>
+            </div>
+            <div class="page-title">
+                Контакты
+            </div>
+            <div class="contacts-block">
+                <div class="ct-controls">
+                    <div class="ct-control active" title="Дзержинск">Дзержинск</div><!-- аттрибут title - костыль, который нужен чтобы создать псевдоэлемент с таким же текстом, только жирным. Это делается  для того чтобы когда другая вкладка становится .active - ничего не дёргалось -->
+                    <div class="ct-control" title="Нижний Новгород">Нижний Новгород</div>
+                    <div class="ct-control" title="Екатеринбург">Екатеринбург</div>
+                    <div class="ct-control" title="Краснодар">Краснодар</div>
+                    <div class="ct-control" title="Самара">Самара </div>
+                    <div class="ct-control" title="Санкт-Петербург">Санкт-Петербург</div>
+                </div>
+                <div class="ct-tabs">
+                    <div class="tab active">
+                        <div class="desc">Головной офис и склад ООО Компания «ОКАХИМ»1</div>
+                        <div class="flex-wrap">
+                            <div class="left">
+                                <div class="options">
+                                    <div class="option">
+                                        <div class="option-name"><span>Адрес: </span></div>
+                                        <div class="option-value">
+                                            <p>606000, Нижегородская обл.,
+                                            </p>
+                                            <p>г. Дзержинск, Речное шоссе, 2А</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Время работы: </span></div>
+                                        <div class="option-value">
+                                            <p>с 9:00 до 17:00</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>
+                                                Отдел продаж:
+                                            </span></div>
+                                        <div class="option-value">
+                                            <p> +7 8313 31-01-55 </p>
+                                            <p>+7 8313 31-01-51</p>
+                                            <p>+7 8313 31-00-35</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Секретарь: </span></div>
+                                        <div class="option-value">
+                                            <p>+7 (8313) 31-01-01 </p>
+                                            <p>(по всем вопросам не связанным
+                                                с продажами)</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>
+                                                E-mail:</span></div>
+                                        <div class="option-value">
+                                            <p>info@okachim.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Схема проезда: </span></div>
+                                        <div class="option-value">
+                                            <p><a href="">Загрузить PDF, 390 Кб</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="map">
+                                    <iframe
+                                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c0489c50860e278812905433db08ce92b044f9245fed18db16f315a7847ba35&amp;source=constructor"
+                                        width="564" height="431" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="desc">Головной офис и склад ООО Компания «ОКАХИМ»2</div>
+                        <div class="flex-wrap">
+                            <div class="left">
+                                <div class="options">
+                                    <div class="option">
+                                        <div class="option-name"><span>Адрес: </span></div>
+                                        <div class="option-value">
+                                            <p>606000, Нижегородская обл.,
+                                            </p>
+                                            <p>г. Дзержинск, Речное шоссе, 2А</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Время работы: </span></div>
+                                        <div class="option-value">
+                                            <p>с 9:00 до 17:00</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>
+                                                Отдел продаж:
+                                            </span></div>
+                                        <div class="option-value">
+                                            <p> +7 8313 31-01-55 </p>
+                                            <p>+7 8313 31-01-51</p>
+                                            <p>+7 8313 31-00-35</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Секретарь: </span></div>
+                                        <div class="option-value">
+                                            <p>+7 (8313) 31-01-01 </p>
+                                            <p>(по всем вопросам не связанным
+                                                с продажами)</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>
+                                                E-mail:</span></div>
+                                        <div class="option-value">
+                                            <p>info@okachim.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Схема проезда: </span></div>
+                                        <div class="option-value">
+                                            <p><a href="">Загрузить PDF, 390 Кб</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="map">
+                                    <iframe
+                                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c0489c50860e278812905433db08ce92b044f9245fed18db16f315a7847ba35&amp;source=constructor"
+                                        width="564" height="431" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="desc">Головной офис и склад ООО Компания «ОКАХИМ»3</div>
+                        <div class="flex-wrap">
+                            <div class="left">
+                                <div class="options">
+                                    <div class="option">
+                                        <div class="option-name"><span>Адрес: </span></div>
+                                        <div class="option-value">
+                                            <p>606000, Нижегородская обл.,
+                                            </p>
+                                            <p>г. Дзержинск, Речное шоссе, 2А</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Время работы: </span></div>
+                                        <div class="option-value">
+                                            <p>с 9:00 до 17:00</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>
+                                                Отдел продаж:
+                                            </span></div>
+                                        <div class="option-value">
+                                            <p> +7 8313 31-01-55 </p>
+                                            <p>+7 8313 31-01-51</p>
+                                            <p>+7 8313 31-00-35</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Секретарь: </span></div>
+                                        <div class="option-value">
+                                            <p>+7 (8313) 31-01-01 </p>
+                                            <p>(по всем вопросам не связанным
+                                                с продажами)</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>
+                                                E-mail:</span></div>
+                                        <div class="option-value">
+                                            <p>info@okachim.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Схема проезда: </span></div>
+                                        <div class="option-value">
+                                            <p><a href="">Загрузить PDF, 390 Кб</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="map">
+                                    <iframe
+                                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c0489c50860e278812905433db08ce92b044f9245fed18db16f315a7847ba35&amp;source=constructor"
+                                        width="564" height="431" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="desc">Головной офис и склад ООО Компания «ОКАХИМ»4</div>
+                        <div class="flex-wrap">
+                            <div class="left">
+                                <div class="options">
+                                    <div class="option">
+                                        <div class="option-name"><span>Адрес: </span></div>
+                                        <div class="option-value">
+                                            <p>606000, Нижегородская обл.,
+                                            </p>
+                                            <p>г. Дзержинск, Речное шоссе, 2А</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Время работы: </span></div>
+                                        <div class="option-value">
+                                            <p>с 9:00 до 17:00</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>
+                                                Отдел продаж:
+                                            </span></div>
+                                        <div class="option-value">
+                                            <p> +7 8313 31-01-55 </p>
+                                            <p>+7 8313 31-01-51</p>
+                                            <p>+7 8313 31-00-35</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Секретарь: </span></div>
+                                        <div class="option-value">
+                                            <p>+7 (8313) 31-01-01 </p>
+                                            <p>(по всем вопросам не связанным
+                                                с продажами)</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>
+                                                E-mail:</span></div>
+                                        <div class="option-value">
+                                            <p>info@okachim.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Схема проезда: </span></div>
+                                        <div class="option-value">
+                                            <p><a href="">Загрузить PDF, 390 Кб</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="map">
+                                    <iframe
+                                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c0489c50860e278812905433db08ce92b044f9245fed18db16f315a7847ba35&amp;source=constructor"
+                                        width="564" height="431" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="desc">Головной офис и склад ООО Компания «ОКАХИМ»5</div>
+                        <div class="flex-wrap">
+                            <div class="left">
+                                <div class="options">
+                                    <div class="option">
+                                        <div class="option-name"><span>Адрес: </span></div>
+                                        <div class="option-value">
+                                            <p>606000, Нижегородская обл.,
+                                            </p>
+                                            <p>г. Дзержинск, Речное шоссе, 2А</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Время работы: </span></div>
+                                        <div class="option-value">
+                                            <p>с 9:00 до 17:00</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>
+                                                Отдел продаж:
+                                            </span></div>
+                                        <div class="option-value">
+                                            <p> +7 8313 31-01-55 </p>
+                                            <p>+7 8313 31-01-51</p>
+                                            <p>+7 8313 31-00-35</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Секретарь: </span></div>
+                                        <div class="option-value">
+                                            <p>+7 (8313) 31-01-01 </p>
+                                            <p>(по всем вопросам не связанным
+                                                с продажами)</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>
+                                                E-mail:</span></div>
+                                        <div class="option-value">
+                                            <p>info@okachim.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Схема проезда: </span></div>
+                                        <div class="option-value">
+                                            <p><a href="">Загрузить PDF, 390 Кб</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="map">
+                                    <iframe
+                                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c0489c50860e278812905433db08ce92b044f9245fed18db16f315a7847ba35&amp;source=constructor"
+                                        width="564" height="431" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="desc">Головной офис и склад ООО Компания «ОКАХИМ»6</div>
+                        <div class="flex-wrap">
+                            <div class="left">
+                                <div class="options">
+                                    <div class="option">
+                                        <div class="option-name"><span>Адрес: </span></div>
+                                        <div class="option-value">
+                                            <p>606000, Нижегородская обл.,
+                                            </p>
+                                            <p>г. Дзержинск, Речное шоссе, 2А</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Время работы: </span></div>
+                                        <div class="option-value">
+                                            <p>с 9:00 до 17:00</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>
+                                                Отдел продаж:
+                                            </span></div>
+                                        <div class="option-value">
+                                            <p> +7 8313 31-01-55 </p>
+                                            <p>+7 8313 31-01-51</p>
+                                            <p>+7 8313 31-00-35</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Секретарь: </span></div>
+                                        <div class="option-value">
+                                            <p>+7 (8313) 31-01-01 </p>
+                                            <p>(по всем вопросам не связанным
+                                                с продажами)</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>
+                                                E-mail:</span></div>
+                                        <div class="option-value">
+                                            <p>info@okachim.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="option">
+                                        <div class="option-name"><span>Схема проезда: </span></div>
+                                        <div class="option-value">
+                                            <p><a href="">Загрузить PDF, 390 Кб</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="map">
+                                    <iframe
+                                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c0489c50860e278812905433db08ce92b044f9245fed18db16f315a7847ba35&amp;source=constructor"
+                                        width="564" height="431" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="page-footer container">
+            <div class="page-footer__left">
+                <a href="" class="page-footer__logo">
+                      <img src="img/footer-logo.svg" alt="">
+    
+                </a>
+            </div>
+            <div class="page-footer__center">
+                <p>© 1999–2019 Оптовые поставки промышленной химии в России и странах СНГ. <span class="new_line_desktop"></span><a href="">Политика конфиденциальности</a></p>
+    
+            </div>
+            <div class="page-footer__right">
+                <p> Создание сайта
+                </p>
+                <a href="">r52.ru</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
