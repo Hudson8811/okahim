@@ -15,3 +15,4 @@
 //= partials/homepage.js
 //= partials/input.file.js
 //= partials/jobs.js
+//= partials/contacts.js
