@@ -350,7 +350,11 @@ Array.prototype.forEach.call( inputs, function( input )
 
 });
 $(document).ready(function() {
-
+    $('.jobs-page .open_block').click(function () {
+        event.preventDefault();
+        $(this).closest('.block').find('.hide').slideToggle();
+        $(this).toggleClass('active');
+    })
 });
 $(document).ready(function() {
 
@@ -407,4 +411,7 @@ $(document).ready(function() {
         $(this).siblings('.popmenu').slideToggle();
         $(this).parents('.has_child').toggleClass('active');
     });
+});
+$(document).ready(function() {
+
 });

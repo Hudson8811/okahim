@@ -18,3 +18,4 @@
 //= partials/product.js
 //= partials/contacts.js
 //= partials/catalog.js
+//= partials/delivery.js
