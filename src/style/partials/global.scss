@@ -7,8 +7,8 @@ $dark : #333333;
 
 
 .page-content{
-  margin-top: 60px;
-  margin-bottom: 114px;
+  padding-top: 60px;
+  padding-bottom: 114px;
 }
 
 .bread{
@@ -20,9 +20,6 @@ $dark : #333333;
   a{
     color: $dark;
     text-decoration: underline;
-    &:not(:first-child){
-      text-decoration: none;
-    }
     &:hover{
       text-decoration: none;
     }
@@ -498,6 +495,10 @@ $dark : #333333;
     &.arr-down{background-image: url("../img/arr-down-hover.svg")}
     &.zoom{background-image: url("../img/zoom-hover.svg")}
   }
+
+  &:after{
+    display: none;
+  }
 }
 
 .pagination{
@@ -592,5 +593,25 @@ $dark : #333333;
       &.vb{background-color: #7b519d;}
       &.wa{background-color: #65bc54;}
     }
+  }
+}
+
+
+.slider-pagination {
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background-color: $dark;
+    opacity: 0.15;
+    margin: 0 8px;
+  }
+
+  .swiper-pagination-bullet-active{
+    background-color: $orange;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover {
+    background-color: $orange;
+    opacity: 0.2;
   }
 }
