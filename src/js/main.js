@@ -20,3 +20,4 @@
 //= partials/catalog.js
 //= partials/delivery.js
 //= partials/about.js
+//= partials/news.js
