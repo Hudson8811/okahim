@@ -1,3 +1,13 @@
+.catalog-menu-side{
+  width: 310px;
+  display: block;
+  @include media((
+          display: (md: none)
+  ));
+  .download-btn{
+    margin-top: 30px;
+  }
+}
 .catalog-menu-acord{
   width: 310px;
   border-radius: 15px;
@@ -107,6 +117,9 @@
 
     .main-side{
       width: 752px;
+      @include media((
+              width: (md: 100%)
+      ));
 
       .top-side{
         height: 150px;
@@ -130,18 +143,100 @@
 
       .bottom-size{
         margin-top: 67px;
+        @include media((
+                margin-top: (md: 54px)
+        ));
+
         ul{
           list-style: none;
-          column-count: 2;
-          column-gap: 30px;
           li{
             margin-bottom: 10px;
-            padding-left: 30px;
+            @include media((
+                    margin-bottom: (md: 8px)
+            ));
             a{
               color: $dark;
               font-size: 16px;
               font-weight: 500;
               line-height: 26px;
+              @include media((
+                      font-size: (md: 14px),
+                      line-height: (mb: 24px)
+              ));
+            }
+          }
+          &.dual{
+            column-count: 2;
+            column-gap: 30px;
+            @include media((
+                    column-count: (sm: 1)
+            ));
+            li{
+              padding-left: 30px;
+              @include media((
+                      padding-left: (sm: 0)
+              ));
+            }
+          }
+        }
+
+        .letters{
+          &.dual{
+            column-count: 2;
+            margin-bottom: -32px;@include media((
+                  margin-bottom: (md: -26px),
+                  column-count: (sm: 1)
+          ));
+          }
+          .letter-block{
+            margin-bottom: 64px;
+            @include media((
+                    margin-bottom: (md: 54px)
+            ));
+            .h3{
+              color: $blue;
+              margin-bottom: 32px;
+              @include media((
+                      margin-bottom: (md: 26px)
+              ));
+            }
+          }
+        }
+
+        .see-also{
+          margin-top: 200px;
+          @include media((
+                  margin-top: (md: 150px, sm: 100px)
+          ));
+          ul{
+            margin-top: 32px;
+            list-style: none;
+            column-count: 2;
+            column-gap: 30px;
+            @include media((
+                    column-count: (sm: 1),
+                    column-gap: (sm: 0)
+            ));
+            li{
+              padding-left: 30px;
+              margin-bottom: 10px;
+              @include media((
+                      padding-left: (md: 0px),
+                      margin-bottom: (md: 8px)
+              ));
+              a{
+                color: $dark;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 26px;
+                @include media((
+                        font-size: (md: 14px),
+                        line-height: (md: 24px)
+                ));
+                &:hover{
+                  text-decoration: underline;
+                }
+              }
             }
           }
         }
