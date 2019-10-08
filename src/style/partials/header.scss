@@ -541,6 +541,10 @@ header {
     cursor: unset;
     padding: 80px 80px 54px;
 
+    @include media((
+            padding: (sm: 30px)
+    ));
+
     .fancybox-close-small {
         @extend .close-btn;
         /*width: 15px;
@@ -588,12 +592,17 @@ header {
 
         input {
             @extend .input;
+            @include media((
+                    width: (sm: 100%)
+            ));
         }
 
         .message {
             @extend .input;
             height: 130px;
-            resize: none;
+            resize: none;@include media((
+                width: (sm: 100%)
+        ));
         }
     }
 
