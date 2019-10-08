@@ -17,4 +17,6 @@
 //= partials/jobs.js
 //= partials/product.js
 //= partials/contacts.js
+//= partials/catalog.js
 //= partials/delivery.js
+//= partials/about.js
