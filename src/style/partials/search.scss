@@ -1,3 +1,97 @@
 .search-page{
+  .search_form{
+    margin-top: -13px;
+    margin-bottom: 48px;
 
+    input[type="text"]{
+      box-sizing: border-box;
+      margin-bottom: 32px;
+      font-family: 'Montserrat';
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      line-height: 19px;
+      padding-top: 19px;
+      padding-bottom: 15px;
+      border:0;
+      padding-left: 19px;
+      padding-right: 19px;
+      border-bottom: 1px solid #e7e7e7;
+      outline: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none ;
+      box-shadow: none ;
+    }
+  }
+
+  .no_find{
+    margin-bottom: 26px;
+  }
+
+  .block{
+    padding-right: 95px;
+    padding-bottom: 26px;
+
+    .link{
+      margin-bottom: 18px;
+
+      a{
+        color: inherit;
+      }
+    }
+
+    .date{
+      margin-top: 25px;
+      margin-bottom: 5px;
+    }
+
+    .path ul{
+      display: inline-block;
+      vertical-align: top;
+      list-style:none;
+
+      li{
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 0;
+
+        &:before{
+          display: none;
+        }
+
+        & + li:before{
+          content: '»';
+          display: inline-block;
+          vertical-align: top;
+          position: static;
+          width: auto;
+          height: auto;
+          background: transparent;
+          top: 0;
+          margin-right: 9px;
+          margin-left: 3px;
+        }
+        
+        a span{
+          border-bottom: 1px solid #455bd7;
+
+          &:hover{
+            border-bottom-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .block + .block{
+    border-top: 1px solid #e7e7e7;
+    padding-top: 28px;
+  }
+}
+
+
+@media (max-width:600px) {
+  .search-page .block{
+    padding-right: 0;
+  }
 }
