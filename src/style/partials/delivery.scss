@@ -1,7 +1,4 @@
 .delivery-page{
-  .pagetitle{
-    margin-bottom: 63px;
-  }
 
   .bg_block{
     margin-top: 60px;
@@ -18,8 +15,17 @@
     background-repeat: no-repeat;
     margin-bottom: 60px;
 
+    @include media((
+            margin-bottom: (md: 50px),
+            margin-top: (md: 50px)
+    ));
+
+
     .h2{
       margin-bottom: 30px;
+      @include media((
+              margin-bottom: (md: 25px)
+      ));
     }
   }
 
@@ -29,6 +35,9 @@
     margin-top: 35px;
     margin-bottom: 102px;
     flex-wrap: wrap;
+    @include media((
+            margin-bottom: (md: 70px)
+    ));
 
     a{
       display: flex;
@@ -43,6 +52,9 @@
     @include flex-row(30px, 30px);
     margin-top: 20px;
     margin-bottom: 110px;
+    @include media((
+            margin-bottom: (md: 70px)
+    ));
     .item{
       display: flex;
       justify-content: center;

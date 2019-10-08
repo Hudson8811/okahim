@@ -3,6 +3,9 @@
     @include flex-row(30px, 30px);
     margin-top: 20px;
     margin-bottom: 110px;
+    @include media((
+            margin-bottom: (md: 70px)
+    ));
     .item{
       display: flex;
       justify-content: center;
@@ -31,12 +34,23 @@
     background: $lightGray;
     border-radius: 15px;
     margin-top: 30px;
+    @include media((
+            margin-top: (md: 43px),
+            padding: (md: 43px 30px 43px 30px),
+            display: (sm: block)
+    ));
     .left{
       display: flex;
       align-items: center;
+      @include media((
+              display: (sm: block)
+      ));
       img{
         width: 60px;
         display: block;
+        @include media((
+                width: (md: 53px, sm: 44px)
+        ));
       }
       .text{
         color: $dark;
@@ -45,6 +59,23 @@
         line-height: 26px;
         margin-left: 45px;
         max-width: 500px;
+        @include media((
+                font-size: (md: 16px,sm: 14px),
+                line-height: (sm: 22px),
+                margin-left: (md: 34px, sm: 0),
+                max-width: (md: 250px),
+                margin-top: (sm: 26px),
+                margin-bottom: (sm: 26px),
+        ));
+      }
+    }
+    .right{
+      .btn-orange{
+        @include media((
+                padding-left: (sm: 15px),
+                padding-right: (sm: 15px),
+                width: (sm: 100%)
+        ));
       }
     }
   }

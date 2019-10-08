@@ -5,7 +5,9 @@ a {
 }
 
 html,
-body {}
+body {
+	min-height: 100%;
+}
 
 body {
 	color: #333333;
@@ -13,11 +15,16 @@ body {
 	font-size: 16px;
 	margin: 0;
 	background: #ffffff;
+	display: flex;
+	flex-direction: column;
+}
+
+main{
+	flex-grow: 1;
 }
 
 .container {
 	width: 1140px;
-	margin: 0 auto;
     max-width: calc(100% - 60px);
     margin: 0 auto;
 }

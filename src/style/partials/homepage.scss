@@ -135,8 +135,11 @@ html {
             margin: 0 8px;
         }
 
-        .swiper-pagination-bullet-active,
-        .swiper-pagination-bullet:hover {
+        .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover {
+            background-color: #ea961c;
+            opacity: 0.4;
+        }
+        .swiper-pagination-bullet-active{
             background-color: #ea961c;
             opacity: 1;
         }
@@ -479,6 +482,9 @@ html {
     }
 }
 
+.predstavitelstva{
+    overflow: hidden;
+}
 
 .predstavitelstva .container {
     display: flex;
@@ -818,11 +824,13 @@ html {
             opacity: 0.15;
             border-radius: 50%;
 
-            &:hover,
+            &:hover{
+                background-color: #ea961c;
+                opacity: 0.4;
+            }
             &.slick-active {
                 background-color: #ea961c;
                 opacity: 1;
-
             }
         }
     }
@@ -861,7 +869,14 @@ html {
         .parthner {
             margin: 0 30px 60px;
 
-            img {}
+            img {
+                filter: grayscale(1) brightness(100);
+                opacity: 0.4;
+                &:hover{
+                    filter: none;
+                    opacity: 1;
+                }
+            }
         }
     }
 }
