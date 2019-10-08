@@ -317,5 +317,43 @@
         }
       }
     }
+
+
+    .download-btn{
+      margin-top: 54px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 74px;
+      border-radius: 15px;
+      cursor: pointer;
+      background: $lightGray;
+      @include media((
+              display: (md: flex)
+      ));
+      img{
+        width: 18px;
+        margin-right: 14px;
+        display: block;
+      }
+      span{
+        color: $dark;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      &:hover{
+        background: $blue;
+        img{
+          filter: brightness(100);
+        }
+        span{
+          color: #ffffff;
+        }
+      }
+    }
   }
+
+
 }

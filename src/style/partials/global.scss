@@ -10,6 +10,10 @@ $dark : #333333;
 .page-content{
   padding-top: 60px;
   padding-bottom: 114px;
+  @include media((
+          padding-top: (md: 54px),
+          padding-bottom: (md: 70px)
+  ));
 }
 
 .bread{
@@ -18,6 +22,9 @@ $dark : #333333;
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
+  @include media((
+          font-size: (md: 12px, sm: 10px)
+  ));
   a{
     color: $dark;
     text-decoration: underline;
@@ -28,10 +35,14 @@ $dark : #333333;
   .sep{
     color: $dark;
     margin: 0 5px;
+    @include media((
+            margin: (md: 0 4px, sm: 0 3px)
+    ));
   }
   .current{
     color: $dark;
   }
+
 }
 
 
