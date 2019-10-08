@@ -165,7 +165,8 @@ $(document).ready(function () {
     $('.page-header__online-req-btn').click(function () {
         $.fancybox.open({
             src: '#online-req-modal',
-            type: 'inline'
+            type: 'inline',
+            touch: false
         });
     });
 });
@@ -381,7 +382,16 @@ $(document).ready(function() {
         event.preventDefault();
         $(this).closest('.block').find('.hide').slideToggle();
         $(this).toggleClass('active');
-    })
+    });
+
+    $('.jobs-page .open-modal').click(function () {
+        $.fancybox.open({
+            src: '#jobs-modal',
+            type: 'inline',
+            touch: false
+        });
+    });
+
 });
 $(document).ready(function() {
 

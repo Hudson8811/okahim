@@ -76,34 +76,37 @@
 <div class="padding-for-fixed-header"></div>
 
 
-<div id="online-req-modal">
+<div id="online-req-modal" class="modal-form">
     <form action="" class="req-modal-form">
-        <div class="title">Онлайн заявка </div>
+        <div class="title h2">Онлайн заявка </div>
         <div class="input-container">
             <div class="input-line">
                 <div class="desc">Имя <span class="star-orange">*</span></div>
-                <input type="text" name="" id="">
+                <input type="text" name="" >
             </div>
             <div class="input-line">
                 <div class="desc">Компания <span class="star-orange">*</span></div>
-                <input type="text" name="" id="">
+                <input type="text" name="" >
             </div>
             <div class="input-line">
                 <div class="desc">Телефон <span class="star-orange">*</span></div>
-                <input type="text" name="" id="">
+                <input type="text" name="" >
             </div>
             <div class="input-line">
                 <div class="desc">E-mail <span class="star-orange">*</span></div>
-                <input type="text" name="" id="">
+                <input type="text" name="" >
             </div>
         </div>
         <div class="input-line">
             <div class="desc">Сообщение <span class="star-orange">*</span></div>
-            <textarea name="" id="" cols="30" rows="10" class="message"></textarea>
+            <textarea cols="30" rows="10" class="message"></textarea>
         </div>
 
         <div class="agreement">
-            <input type="checkbox" name="" id="agr-ch-req" checked><label for="agr-ch-req" class="agr-check"></label>
+            <label class="checkbox">
+                <input type="checkbox" >
+                <span></span>
+            </label>
             <p>Я согласен на <a href="">обработку персональных данных</a></p>
         </div>
         <div class="submit">
@@ -183,7 +186,7 @@
                         <ul>
                             <li>Полная занятость, полный день.</li>
                         </ul>
-                        <a class="btn-orange">Откликнуться</a>
+                        <a class="btn-orange open-modal">Откликнуться</a>
                     </div>
                 </div>
                 <div class="block">
@@ -228,7 +231,7 @@
                         <ul>
                             <li>Полная занятость, полный день.</li>
                         </ul>
-                        <a class="btn-orange">Откликнуться</a>
+                        <a class="btn-orange open-modal">Откликнуться</a>
                     </div>
                 </div>
             </div>
@@ -255,6 +258,49 @@
         </div>
     </div>
 </footer>
+
+<div id="jobs-modal" class="modal-form">
+    <form action="" class="req-modal-form">
+        <div class="title h2">Отклик на вакансию</div>
+        <div class="input-container">
+            <div class="input-line">
+                <div class="desc">Имя <span class="star-orange">*</span></div>
+                <input type="text" name="" >
+            </div>
+            <div class="input-line">
+                <div class="desc">Телефон <span class="star-orange">*</span></div>
+                <input type="text" name="" >
+            </div>
+            <div class="input-line">
+                <div class="desc">E-mail <span class="star-orange">*</span></div>
+                <input type="text" name="" >
+            </div>
+        </div>
+        <div class="input-line">
+            <div class="desc">Сообщение <span class="star-orange">*</span></div>
+            <textarea cols="30" rows="10" class="message"></textarea>
+        </div>
+
+        <div class="input-line">
+            <div class="desc">Файл <span class="star-orange">*</span></div>
+            <div>
+                <input type="file" name="file" id="file" class="inputfile" multiple>
+                <label for="file"><span>Прикрепить резюме</span></label>
+            </div>
+        </div>
+
+        <div class="agreement">
+            <label class="checkbox">
+                <input type="checkbox" >
+                <span></span>
+            </label>
+            <p>Я согласен на <a href="">обработку персональных данных</a></p>
+        </div>
+        <div class="submit">
+            <div class="btn-orange">Отправить</div>
+        </div>
+    </form>
+</div>
 
 <script src="js/main.js"></script>
 

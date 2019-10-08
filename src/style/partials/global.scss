@@ -5,6 +5,8 @@ $lightGray : #f7f8f9;
 $gray : #cccccc;
 $dark : #333333;
 
+$font1: "Montserrat",
+sans-serif;
 
 
 .page-content{
@@ -74,6 +76,8 @@ $dark : #333333;
   visibility: hidden;
   width: 1px;
   height: 1px;
+  top: 0;
+  left: 0;
 }
 
 .btn-orange{

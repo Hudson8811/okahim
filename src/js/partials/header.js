@@ -99,7 +99,8 @@ $(document).ready(function () {
     $('.page-header__online-req-btn').click(function () {
         $.fancybox.open({
             src: '#online-req-modal',
-            type: 'inline'
+            type: 'inline',
+            touch: false
         });
     });
 });

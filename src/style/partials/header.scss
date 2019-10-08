@@ -535,21 +535,23 @@ header {
 ///////////////////////////////////
 
 
-#online-req-modal {
+.modal-form {
     display: none;
     border-radius: 15px;
     cursor: unset;
+    padding: 80px 80px 54px;
 
     .fancybox-close-small {
-        width: 15px;
+        @extend .close-btn;
+        /*width: 15px;
         height: 15px;
         background: url(../img/close.svg) no-repeat center center;
         background-size: 100% 100%;
 
+        padding: 0;*/
+
         right: 30px;
         top: 30px;
-        padding: 0;
-
         svg {
             display: none;
         }
@@ -558,20 +560,24 @@ header {
     .req-modal-form {}
 
     .title {
-        font-size: 30px;
-        line-height: 60px;
-        font-weight: 400;
-        margin-top: 10px;
+        text-align: center;
     }
 
-    .input-container {}
+    .input-container {
+        margin-top: 40px;
+    }
 
     .input-line {
-
+        display: flex;
+        margin-top: 11px;
+        @include media((
+                display: (sm: block)
+        ));
         .desc {
-            font-size: 14px;
+            font-size: 16px;
             line-height: 36px;
             font-weight: 700;
+            width: 160px;
         }
 
         .star-orange {
@@ -580,29 +586,12 @@ header {
 
 
 
-        input,
-        .message {
-            border-radius: 6px;
-            background-color: #f6f6f6;
-            border: 0;
-            font-family: Montserrat;
-            color: #333;
-            font-size: 14px;
-            line-height: 24px;
-            font-weight: 400;
-        }
-
         input {
-            height: 50px;
-            padding: 0 15px;
-            line-height: 50px;
-
-            width: 100%;
+            @extend .input;
         }
 
         .message {
-            padding: 15px;
-            width: 100%;
+            @extend .input;
             height: 130px;
             resize: none;
         }
@@ -611,6 +600,8 @@ header {
     .agreement {
         margin-top: 20px;
         position: relative;
+        display: flex;
+        align-items: flex-start;
 
         #agr-ch-req {
             display: none;
@@ -646,8 +637,7 @@ header {
 
         p {
             padding-top: 3px;
-
-                padding-left: 33px;
+            padding-left: 15px;
         }
 
         a {
@@ -668,7 +658,6 @@ header {
         justify-content: center;
         width: 100%;
         .btn-orange {
-            margin: 0 auto;
             margin: 30px auto 0;
         }
     }
