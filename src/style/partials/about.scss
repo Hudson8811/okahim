@@ -5,10 +5,16 @@
   .text-block{
     .text-block-title{
       margin-bottom: 32px;
+      @include media((
+              margin-bottom: (md: 26px)
+      ));
       &.flex-block {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include media((
+                display: (sm: block)
+        ));
 
         .all {
           display: inline-block;
@@ -19,6 +25,10 @@
           background: url("../img/arr-right-blue.svg") right center no-repeat;
           background-size: 7px 10px;
           font-weight: 500;
+          @include media((
+                  font-size: (md: 14px),
+                  margin-top: (sm: 26px)
+          ));
           &:hover {
             text-decoration: none;
           }
@@ -32,6 +42,9 @@
     padding-top: 60px;
     background: #f4f6f6 url('../img/about-bg.png') center top no-repeat;
     overflow: hidden;
+    @include media((
+            padding-top: (md: 54px)
+    ));
     .video-block{
       position: relative;
       width: 100%;
@@ -39,6 +52,9 @@
       box-shadow: 0 30px 60px rgba(10, 26, 45, 0.2);
       border-radius: 15px;
       background-color: #455bd7;
+      @include media((
+              height: (md: 340px, sm: 250px)
+      ));
       a{
         width: 100%;
         height: 100%;
@@ -114,11 +130,20 @@
         right: -144px;
         bottom: -78px;
         pointer-events: none;
+        @include media((
+                width: (md: 152px),
+                height: (md: 156px),
+                right: (md: -56px),
+                bottom: (md: -38px),
+        ));
       }
     }
 
     .text-block{
       margin-top: 120px;
+      @include media((
+              margin-top: (md: 70px)
+      ));
     }
 
     .grid-images{
@@ -128,12 +153,23 @@
       overflow: hidden;
       padding-top: 30px;
       margin-top: 90px;
+      @include media((
+              padding-top: (md: 26px),
+              margin-top: (md: 44px),
+              height: (md: 250px)
+      ));
       .col{
         +.col{
           margin-left: 20px;
+          @include media((
+                  margin-left: (md: 15px)
+          ));
         }
         &:nth-child(2n){
           margin-top: 40px;
+          @include media((
+                  margin-top: (md: 20px)
+          ));
         }
         .item{
           display: block;
@@ -142,8 +178,15 @@
           position: relative;
           border-radius: 15px;
           transition: transform 0.2s linear;
+          @include media((
+                  width: (md: 206px),
+                  height: (md: 138px)
+          ));
           +.item{
             margin-top: 20px;
+            @include media((
+                    margin-top: (md: 10px)
+            ));
           }
           img{
             display: block;
@@ -184,13 +227,22 @@
 
   .production-block{
     padding-top: 120px;
+    @include media((
+            padding-top: (md: 70px)
+    ));
     .text-block{
       .text-block-title{
         margin-bottom: 32px;
+        @include media((
+                margin-bottom: (md: 26px)
+        ));
       }
     }
     .production-swiper{
       padding-top: 72px;
+      @include media((
+              padding-top: (md: 22px)
+      ));
       .swiper-slide{
         width: 360px;
         a{
@@ -283,6 +335,9 @@
       .swiper-pagination{
         position: static;
         margin-top: 64px;
+        @include media((
+                margin-top: (md: 54px)
+        ));
       }
     }
   }
@@ -296,22 +351,45 @@
     overflow: hidden;
     min-height: 710px;
     box-sizing: border-box;
+    @include media((
+            margin-top: (md: 70px),
+            padding-top: (md: 20px),
+            background-size: (md: 1447px 535px),
+            min-height: (md: 535px),
+    ));
     .graf{
       margin-top: 120px;
+      @include media((
+              margin-top: (md: 70px)
+      ));
       .line{
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         position: relative;
         z-index: 1;
+        @include media((
+                overflow-x: (sm: scroll),
+                width: (sm: calc(100% + 30px)),
+                margin-left: (sm: -30px),
+                padding-left: (sm: 30px),
+                margin-right: (sm: -30px),
+        ));
         .item{
           position: relative;
           z-index: 1;
+          @include media((
+                  margin-right: (sm: 10px)
+          ));
           .icon{
             width: 29px;
             height: 36px;
             background: url("../img/map-mark-2.svg") center center no-repeat;
             background-size: contain;
+            @include media((
+                    width: (md: 23px),
+                    height: (md: 29px)
+            ));
           }
           .point{
             width: 13px;
@@ -328,6 +406,9 @@
             color: $dark;
             font-size: 18px;
             font-weight: 700;
+            @include media((
+                    font-size: (md: 12px)
+            ));
           }
           .date{
             margin-left: 8px;
@@ -335,6 +416,10 @@
             color: #d8dee0;
             font-size: 30px;
             font-weight: 900;
+            white-space: nowrap;
+            @include media((
+                    font-size: (md: 20px, sm: 14px)
+            ));
           }
         }
         &::before{
@@ -347,15 +432,26 @@
           position: absolute;
           display: block;
           z-index: -1;
+          @include media((
+                  top: (md: 37px),
+                  left: (sm: 41px),
+                  width: (sm: 150%)
+          ));
         }
       }
       .many-block{
         text-align: center;
         margin-top: 85px;
+        @include media((
+                margin: (md: 65px)
+        ));
         .text{
           color: $dark;
           font-size: 28px;
           font-weight: 700;
+          @include media((
+                  font-size: (md: 20px)
+          ));
         }
         img{
           display: block;
@@ -369,11 +465,21 @@
   .partners-block{
     margin-top: 120px;
     margin-bottom: 63px;
+    @include media((
+            margin-top: (md: 70px),
+            margin-bottom: (md: 53px)
+    ));
     .partners-swiper{
       margin-top: 53px;
+      @include media((
+              margin-top: (md: 43px)
+      ));
       .swiper-pagination{
         position: static;
         margin-top: 53px;
+        @include media((
+                margin-top: (md: 43px)
+        ));
       }
       .swiper-slide{
         width: 165px;
@@ -394,6 +500,9 @@
   .mission-block{
     padding-top: 120px;
     background: url("../img/about-mission-bg.jpg") center top no-repeat;
+    @include media((
+            padding-top: (md: 70px)
+    ));
     .text-block{
       color: #ffffff;
     }
@@ -404,8 +513,17 @@
       width: calc(100% + 100px);
       margin-left: -50px;
       margin-right: -50px;
+      @include media((
+              margin-top: (md: 70px),
+              width: (md: calc(100% + 60px)),
+              margin-left: (md: -30px),
+              margin-right: (md: -30px),
+      ));
       .item{
         padding: 53px 50px;
+        @include media((
+                padding: (md: 43px 30px)
+        ));
 
         +.item{
           border-top: 1px solid rgba(204, 204, 204, 0.4);
@@ -420,14 +538,25 @@
           counter-reset: li;
           margin-top: 53px;
           display: none;
+          @include media((
+                  margin-top: (md: 43px)
+          ));
           li{
             padding-left: 96px;
             position: relative;
             font-size: 16px;
             font-weight: 400;
             line-height: 28px;
+            @include media((
+                    font-size: (md: 14px),
+                    line-height: (md: 24px),
+                    padding-left: (md: 60px),
+            ));
             +li{
               margin-top: 32px;
+              @include media((
+                      margin-top: (md: 26px)
+              ));
             }
             &::before {
               position: absolute;
@@ -438,6 +567,9 @@
               color: #e5e8ea;
               font-size: 30px;
               font-weight: 900;
+              @include media((
+                      font: (md: 26px)
+              ));
             }
           }
         }
@@ -464,17 +596,27 @@
   .show-block{
     margin-top: 120px;
     padding-bottom: 64px;
+    @include media((
+            margin-top: (md: 70px),
+            padding-bottom: (md: 54px),
+    ));
     .flex-block{
       margin-top: 53px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       align-items: center;
+      @include media((
+              margin-top: (md: 43px)
+      ));
       .item{
         display: flex;
         width: 25%;
         align-items: center;
         justify-content: center;
+        @include media((
+                width: (sm: 50%)
+        ));
         img{
           display: block;
           max-width: 90%;
@@ -487,16 +629,26 @@
     padding-top: 64px;
     padding-bottom: 120px;
     background: $lightGray;
+    @include media((
+            padding-top: (md: 54px),
+            padding-bottom: (md: 70px),
+    ));
     .flex-block{
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
       margin-top: 53px;
+      @include media((
+              margin-top: (md: 43px)
+      ));
       .item{
         display: block;
         width: 215px;
         position: relative;
         border-radius: 15px;
+        @include media((
+                width: (md: 155px, sm: 120px)
+        ));
         img{
           display: block;
           width: 100%;
@@ -531,12 +683,18 @@
   .download-block{
     padding: 64px 0;
     text-align: center;
+    @include media((
+            padding: (md: 54px 0)
+    ));
     .btn-orange{
       img{
         width: 19px;
         margin-right: 12px;
         vertical-align: middle;
         display: inline-block;
+        @include media((
+                display: (sm: none)
+        ));
       }
       span{
         display: inline-block;

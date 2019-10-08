@@ -439,6 +439,17 @@ $(document).ready(function() {
         $(this).parents('.has_child').toggleClass('active');
     });
 });
+$(document).ready(function() {
+
+});
+$(document).ready(function() {
+    $('.acords-blocks .circle-btn').click(function () {
+        event.preventDefault();
+        $(this).parents('.item').find('ol').slideToggle();
+        $(this).parents('.item').toggleClass('active');
+    });
+});
+
 
 var productionSwiper = new Swiper('.production-swiper', {
     slidesPerView: 'auto',
@@ -451,7 +462,7 @@ var productionSwiper = new Swiper('.production-swiper', {
     },
 });
 
-var productionSwiper = new Swiper('.partners-swiper', {
+var partnersSwiper = new Swiper('.partners-swiper', {
     slidesPerView: 6,
     spaceBetween: 30,
     loop: true,
@@ -459,16 +470,20 @@ var productionSwiper = new Swiper('.partners-swiper', {
         el: '.partners-swiper .swiper-pagination',
         clickable: true,
     },
-});
-$(document).ready(function() {
-
-});
-$(document).ready(function() {
-    $('.acords-blocks .circle-btn').click(function () {
-        event.preventDefault();
-        $(this).parents('.item').find('ol').slideToggle();
-        $(this).parents('.item').toggleClass('active');
-    });
+    breakpoints: {
+        300: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        760: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 6,
+            spaceBetween: 30,
+        },
+    }
 });
 
 if ($('.np-tab-controls').length > 0) {
