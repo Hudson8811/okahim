@@ -12,7 +12,6 @@
 
 <body>
 
-
 <header class="header_with-box-shadow">
     <div class="page-header">
         <div class="page-header__top-line">
@@ -53,7 +52,7 @@
                     <div class="number">+7 (812) 407-71-60</div>
                 </div>
             </div>
-            <a href="" class="btn page-header__online-req-btn"><span>Онлайн заявка</span></a>
+            <a onclick="" class="btn btn-orange page-header__online-req-btn"><span>Онлайн заявка</span></a>
         </div>
         <div class="page-header__bottom-line">
             <div class="page-header__menu">
@@ -75,6 +74,43 @@
     </div>
 </header>
 <div class="padding-for-fixed-header"></div>
+
+
+<div id="online-req-modal">
+    <form action="" class="req-modal-form">
+        <div class="title">Онлайн заявка </div>
+        <div class="input-container">
+            <div class="input-line">
+                <div class="desc">Имя <span class="star-orange">*</span></div>
+                <input type="text" name="" id="">
+            </div>
+            <div class="input-line">
+                <div class="desc">Компания <span class="star-orange">*</span></div>
+                <input type="text" name="" id="">
+            </div>
+            <div class="input-line">
+                <div class="desc">Телефон <span class="star-orange">*</span></div>
+                <input type="text" name="" id="">
+            </div>
+            <div class="input-line">
+                <div class="desc">E-mail <span class="star-orange">*</span></div>
+                <input type="text" name="" id="">
+            </div>
+        </div>
+        <div class="input-line">
+            <div class="desc">Сообщение <span class="star-orange">*</span></div>
+            <textarea name="" id="" cols="30" rows="10" class="message"></textarea>
+        </div>
+
+        <div class="agreement">
+            <input type="checkbox" name="" id="agr-ch-req" checked><label for="agr-ch-req" class="agr-check"></label>
+            <p>Я согласен на <a href="">обработку персональных данных</a></p>
+        </div>
+        <div class="submit">
+            <div class="btn-orange">Отправить</div>
+        </div>
+    </form>
+</div>
 
 
 <main class="page-content about-page">
@@ -107,6 +143,32 @@
                 </div>
             </div>
         </div>
+        <div class="grid-images">
+            <div class="col">
+                <a href="img/about-test-1.jpg" data-fancybox="grid" class="item"><img src="img/about-test-1.jpg" alt=""></a>
+                <a href="img/about-test-2.jpg" data-fancybox="grid" class="item"><img src="img/about-test-2.jpg" alt=""></a>
+            </div>
+            <div class="col">
+                <a href="img/about-test-3.jpg" data-fancybox="grid" class="item"><img src="img/about-test-3.jpg" alt=""></a>
+                <a href="img/about-test-4.jpg" data-fancybox="grid" class="item"><img src="img/about-test-4.jpg" alt=""></a>
+            </div>
+            <div class="col">
+                <a href="img/about-test-5.jpg" data-fancybox="grid" class="item"><img src="img/about-test-5.jpg" alt=""></a>
+                <a href="img/about-test-6.jpg" data-fancybox="grid" class="item"><img src="img/about-test-6.jpg" alt=""></a>
+            </div>
+            <div class="col">
+                <a href="img/about-test-7.jpg" data-fancybox="grid" class="item"><img src="img/about-test-7.jpg" alt=""></a>
+                <a href="img/about-test-8.jpg" data-fancybox="grid" class="item"><img src="img/about-test-8.jpg" alt=""></a>
+            </div>
+            <div class="col">
+                <a href="img/about-test-9.jpg" data-fancybox="grid" class="item"><img src="img/about-test-9.jpg" alt=""></a>
+                <a href="img/about-test-10.jpg" data-fancybox="grid" class="item"><img src="img/about-test-10.jpg" alt=""></a>
+            </div>
+            <div class="col">
+                <a href="img/about-test-11.jpg" data-fancybox="grid" class="item"><img src="img/about-test-11.jpg" alt=""></a>
+                <a href="img/about-test-12.jpg" data-fancybox="grid" class="item"><img src="img/about-test-12.jpg" alt=""></a>
+            </div>
+        </div>
     </div>
 
     <div class="production-block">
@@ -121,7 +183,56 @@
 
         <div class="production-swiper swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="img/about-product-test.jpg" alt="" class="background">
+                        <span class="label">Сырье для производства композитов</span>
+                        <span class="icon">
+                            <img src="img/about-zavod.svg" alt="" class="before">
+                            <img src="img/about-zavod.svg" alt="" class="center">
+                        </span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="img/about-product-test.jpg" alt="" class="background">
+                        <span class="label">Сырье для бытовой химии</span>
+                        <span class="icon">
+                            <img src="img/about-zavod.svg" alt="" class="before">
+                            <img src="img/about-zavod.svg" alt="" class="center">
+                        </span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="img/about-product-test.jpg" alt="" class="background">
+                        <span class="label">Сырье для производства композитов</span>
+                        <span class="icon">
+                            <img src="img/about-zavod.svg" alt="" class="before">
+                            <img src="img/about-zavod.svg" alt="" class="center">
+                        </span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="img/about-product-test.jpg" alt="" class="background">
+                        <span class="label">Сырье для переработки ПВХ</span>
+                        <span class="icon">
+                            <img src="img/about-zavod.svg" alt="" class="before">
+                            <img src="img/about-zavod.svg" alt="" class="center">
+                        </span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="img/about-product-test.jpg" alt="" class="background">
+                        <span class="label">Сырье для производства ЛКМ</span>
+                        <span class="icon">
+                            <img src="img/about-zavod.svg" alt="" class="before">
+                            <img src="img/about-zavod.svg" alt="" class="center">
+                        </span>
+                    </a>
+                </div>
             </div>
             <div class="swiper-pagination slider-pagination"></div>
         </div>
@@ -198,7 +309,17 @@
 
             <div class="partners-swiper swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide"><img src="img/partners/p1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/partners/p2.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/partners/p3.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/partners/p4.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/partners/p5.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/partners/p6.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/partners/p7.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/partners/p8.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/partners/p9.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/partners/p10.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/partners/p11.png" alt=""></div>
                 </div>
                 <div class="swiper-pagination slider-pagination"></div>
             </div>
