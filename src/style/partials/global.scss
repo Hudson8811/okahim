@@ -59,6 +59,7 @@ $dark : #333333;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.2;
+  text-align: center;
 
   &:hover {
   }
@@ -256,8 +257,12 @@ $dark : #333333;
 }
 
 .pagetitle{
-  margin-top: 10px;
-  margin-bottom: 55px;
+  margin-top: 22px;
+  margin-bottom: 64px;
+  @include media((
+          margin-top: (md: 18px),
+          margin-bottom: (md: 54px)
+  ));
 }
 
 %margin_h{

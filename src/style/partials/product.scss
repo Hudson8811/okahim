@@ -3,6 +3,9 @@
   border-radius: 15px;
   background: $lightGray;
   box-sizing: border-box;
+  @include media((
+          display: (md: none)
+  ));
   .categories{
     padding: 30px 30px 30px 38px;
     box-sizing: border-box;
@@ -111,26 +114,47 @@
   }
   .main-side{
     width: 752px;
+    @include media((
+            width: (md: 100%)
+    ));
 
     .table-image-block{
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include media((
+              display: (sm: block)
+      ));
       .table{
         display: table;
         width: 556px;
+        @include media((
+                width: (md: calc(100% - 150px), sm: 100%),
+                display: (sm: block)
+        ));
         .tr{
           display: table-row;
+          @include media((
+                  display: (sm: block)
+          ));
           .td{
             display: table-cell;
             color: $dark;
             font-size: 16px;
             font-weight: 500;
             padding: 7px 0;
+            @include media((
+                    font-size: (md: 14px),
+                    padding: (md: 5px 0),
+                    display: (sm: block)
+            ));
             &:first-child{
               font-weight: 700;
               width: 230px;
               overflow: hidden;
+              @include media((
+                      width: (md: 203px, sm: 100%)
+              ));
               &:after {
                 content: '';
                 display: inline-block;
@@ -143,12 +167,20 @@
             }
             &:last-child{
               padding-left: 5px;
+              @include media((
+                      padding-left: (sm: 0),
+                      padding-bottom: (sm: 12px)
+              ));
             }
           }
         }
       }
       .img{
         width: 166px;
+        @include media((
+                width: (md: 150px),
+                margin-top: (sm: 14px)
+        ));
         img{
           max-width: 100%;
           display: block;
@@ -158,10 +190,16 @@
 
     > .text-style{
       margin-top: 32px;
+      @include media((
+              margin-top: (md: 26px)
+      ));
     }
     .vendor-block{
       padding: 50px 0;
       border-bottom: 1px solid rgba(204, 204, 204, 0.4);
+      @include media((
+              padding: (md: 43px 0)
+      ));
       > h3{
         margin-bottom: 50px;
       }
@@ -170,6 +208,15 @@
         overflow-x: auto;
         margin-top: 50px;
         display: none;
+        box-sizing: border-box;
+        @include media((
+                margin-top: (md: 43px),
+                padding-left: (sm: 30px),
+                padding-right: (sm: 30px),
+                margin-left: (sm: -30px),
+                margin-right: (sm: -30px),
+                width: (sm: calc(100% + 60px))
+        ));
         table{
           width: 100%;
           text-align: left;
@@ -185,6 +232,10 @@
               font-weight: 700;
               line-height: 26px;
               border-bottom: 3px solid $blue;
+              @include media((
+                      padding: (md: 8px 9px 18px),
+                      font-size: (md: 14px)
+              ));
             }
             td{
               padding: 10px 19px;
@@ -194,6 +245,11 @@
               font-size: 16px;
               font-weight: 500;
               line-height: 26px;
+              @include media((
+                      padding: (md: 8px 9px),
+                      font-size: (md: 14px),
+                      line-height: (md: 24px)
+              ));
             }
             &:nth-child(2n){
               td{
@@ -206,6 +262,9 @@
       .vendor-gallery{
         margin-top: 53px;
         display: none;
+        @include media((
+                margin-top: (md: 43px)
+        ));
         .swiper-slide{
           overflow: hidden;
           border-radius: 15px;
@@ -217,21 +276,35 @@
         .slider-pagination{
           position: static;
           margin-top: 32px;
+          @include media((
+                  margin-top: (md: 26px)
+          ));
         }
         .swiper-button-prev,
         .swiper-button-next{
           top: calc( (100% - 36px) /2 - 25px);
+          @include media((
+                  top: (md: calc( (100% - 30px) /2 - 25px)),
+                  display: (sm: none)
+          ));
         }
         .zoom{
           position: absolute;
           right: 30px;
           top: 30px;
+          @include media((
+                  top: (sm: calc(50% - 25px)),
+                  right: (sm: calc(50% - 25px))
+          ));
         }
       }
       .show-more{
         margin-top: 53px;
         display: inline-block;
         cursor: pointer;
+        @include media((
+                margin-top: (md: 43px)
+        ));
         span{
           color: $blue;
           font-size: 16px;
@@ -241,6 +314,9 @@
           border-bottom: 1px dotted $blue;
           display: inline-block;
           vertical-align: middle;
+          @include media((
+                  font-size: (md: 14px)
+          ));
         }
         svg{
           width: 10px;
@@ -278,12 +354,23 @@
       background: $lightGray;
       border-radius: 15px;
       margin-top: 53px;
+      @include media((
+              margin-top: (md: 43px),
+              padding: (md: 43px 30px 43px 30px),
+              display: (sm: block)
+      ));
       .left{
         display: flex;
         align-items: center;
+        @include media((
+                display: (sm: block)
+        ));
         img{
           width: 60px;
           display: block;
+          @include media((
+                  width: (md: 53px, sm: 44px)
+          ));
         }
         .text{
           color: $dark;
@@ -292,24 +379,57 @@
           line-height: 26px;
           margin-left: 45px;
           max-width: 280px;
+          @include media((
+                  font-size: (md: 16px,sm: 14px),
+                  line-height: (sm: 22px),
+                  margin-left: (md: 34px, sm: 0),
+                  max-width: (md: 250px),
+                  margin-top: (sm: 26px),
+                  margin-bottom: (sm: 26px),
+          ));
+        }
+      }
+      .right{
+        .btn-orange{
+          @include media((
+                  padding-left: (sm: 15px),
+                  padding-right: (sm: 15px),
+                  width: (sm: 100%)
+          ));
         }
       }
     }
+
     .see-also{
       margin-top: 60px;
+      @include media((
+              margin-top: (md: 54px)
+      ));
       ul{
         margin-top: 32px;
         list-style: none;
         column-count: 2;
         column-gap: 30px;
+        @include media((
+                column-count: (sm: 1),
+                column-gap: (sm: 0)
+        ));
         li{
           padding-left: 30px;
           margin-bottom: 10px;
+          @include media((
+                  padding-left: (md: 0px),
+                  margin-bottom: (md: 8px)
+          ));
           a{
             color: $dark;
             font-size: 16px;
             font-weight: 500;
             line-height: 26px;
+            @include media((
+                    font-size: (md: 14px),
+                    line-height: (md: 24px)
+            ));
             &:hover{
               text-decoration: underline;
             }
