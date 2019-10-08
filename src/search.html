@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Тайтл</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+//= template/header.html
+
+<main class="page-content search-page ">
+    <div class="container">
+
+        //= template/bread.html
+
+        <h1 class="pagetitle h2">Поиск</h1>
+
+        <form class="search_form" action="post">
+            <input value="Натрий" type="text">
+            <button class="btn-orange">Искать<span class="button__container" style="filter: url(&quot;#filter-goo&quot;);"><span class="circle top-left" style="transform: matrix(0.7071, -0.7071, 0.7071, 0.7071, 8, 8); opacity: 1;"></span><span class="circle top-left" style="transform: matrix(0.7071, -0.7071, 0.7071, 0.7071, 8, 8); opacity: 1;"></span><span class="circle top-left" style="transform: matrix(0.7071, -0.7071, 0.7071, 0.7071, 8, 8); opacity: 1;"></span><span class="button__bg"></span><span class="circle bottom-right" style="transform: matrix(0.7071, -0.7071, 0.7071, 0.7071, -8, -8); opacity: 1;"></span><span class="circle bottom-right" style="transform: matrix(0.7071, -0.7071, 0.7071, 0.7071, -8, -8); opacity: 1;"></span><span class="circle bottom-right" style="transform: matrix(0.7071, -0.7071, 0.7071, 0.7071, -8, -8); opacity: 1;"></span></span></button>
+        </form>
+        <div class="no_find"><b>По вашему запросу ничего не найдено. </b></div>
+        <div>Пожалуйста уточните фразу и начните поиск снова.</div>
+    </div>
+</main>
+
+//= template/footer.html
+
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
