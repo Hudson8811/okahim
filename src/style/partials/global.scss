@@ -6,6 +6,7 @@ $gray : #cccccc;
 $dark : #333333;
 
 
+
 .page-content{
   padding-top: 60px;
   padding-bottom: 114px;
@@ -150,26 +151,46 @@ $dark : #333333;
 .h1{
   font-size: 50px;
   line-height: 62px;
+  @include media((
+          font-size: (md-sm: 40px),
+          line-height: (md: 46px)
+  ));
 }
 
 .h2{
   font-size: 40px;
   line-height: 46px;
+  @include media((
+          font-size: (md: 30px),
+          line-height: (md: 36px)
+  ));
 }
 
 .h3{
   font-size: 30px;
   line-height: 36px;
+  @include media((
+          font-size: (md: 20px),
+          line-height: (md: 26px)
+  ));
 }
 
 .h4{
   font-size: 20px;
   line-height: 26px;
+  @include media((
+          font-size: (md: 16px),
+          line-height: (md: 26px)
+  ));
 }
 
 .p{
   font-size: 16px;
   line-height: 26px;
+  @include media((
+          font-size: (md: 14px),
+          line-height: (md: 24px)
+  ));
   a{
     color: $blue;
     text-decoration: underline;
@@ -248,24 +269,25 @@ $dark : #333333;
 %margin_ul{
   &:not(:last-child){
     margin-bottom: 53px;
+    @include media((
+            margin-bottom: (sm: 43px)
+    ));
   }
   &:not(:first-child){
     margin-top: 53px;
-  }
-  @media all and (max-width: 760px) {
-    &:not(:last-child){
-      margin-bottom: 43px;
-    }
-    &:not(:first-child){
-      margin-top: 43px;
-    }
+    @include media((
+            margin-top: (sm: 43px)
+    ));
   }
 }
 
 .text-style{
   font-size: 16px;
   line-height: 26px;
-
+  @include media((
+          font-size: (md: 14px),
+          line-height: (md: 24px)
+  ));
   h1{
     @extend .h1;
     @extend %margin_h;
@@ -476,7 +498,7 @@ $dark : #333333;
   box-sizing: border-box;
   border-radius: 100%;
   border: 2px solid #d6d6d6;
-  background-color: #ffffff;
+  background-color: transparent;
   background-size: 13px 13px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -484,7 +506,7 @@ $dark : #333333;
   &.arr-right{background-image: url("../img/arr-right.svg")}
   &.arr-up{background-image: url("../img/arr-up.svg")}
   &.arr-down{background-image: url("../img/arr-down.svg")}
-  &.zoom{background-image: url("../img/zoom.svg")}
+  &.zoom{background-image: url("../img/zoom.svg"); transform: rotate(90deg); background-size: 17px 17px;}
 
   &:hover{
     border-color: $orange;

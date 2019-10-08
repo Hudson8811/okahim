@@ -218,8 +218,14 @@
           position: static;
           margin-top: 32px;
         }
-        .circle-btn{
+        .swiper-button-prev,
+        .swiper-button-next{
           top: calc( (100% - 36px) /2 - 25px);
+        }
+        .zoom{
+          position: absolute;
+          right: 30px;
+          top: 30px;
         }
       }
       .show-more{
