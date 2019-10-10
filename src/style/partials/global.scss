@@ -479,7 +479,7 @@ sans-serif;
         }
       }
     }
-    &:not(:checked):focus, &:not(:checked):hover {
+    &:not(:checked):hover {
       + span{
         &:after {
           display: block;
