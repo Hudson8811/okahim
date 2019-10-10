@@ -2,7 +2,7 @@
   width: 310px;
   display: block;
   @include media((
-          display: (sm: none),
+          display: (760: none),
           width: (md: 270px)
   ));
   .download-btn{
