@@ -158,11 +158,12 @@
       .col{
         float: left;
         transition: margin 0.5s linear;
+        margin-left: 20px;
+        @include media((
+                margin-left: (md: 15px)
+        ));
         +.col{
-          margin-left: 20px;
-          @include media((
-                  margin-left: (md: 15px)
-          ));
+
         }
         &:nth-child(2n){
           margin-top: 40px;
