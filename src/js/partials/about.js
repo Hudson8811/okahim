@@ -4,6 +4,14 @@ $(document).ready(function() {
         $(this).parents('.item').find('ol').slideToggle();
         $(this).parents('.item').toggleClass('active');
     });
+
+    $(".about-page .first-block .grid-images").smoothDivScroll({
+        mousewheelScrolling: "",
+        manualContinuousScrolling: true,
+        autoScrollingMode: "always",
+        autoScrollingStep: 1,
+        touchScrolling: true
+    });
 });
 
 

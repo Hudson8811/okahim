@@ -7,7 +7,10 @@
 //= libs/swiper.min.js
 //= libs/tooltipster.bundle.min.js
 //= libs/slick.min.js
-//= libs/validate.js
+//= libs/jquery-ui-1.10.3.custom.min.js
+//= libs/jquery.kinetic.min.js
+//= libs/jquery.mousewheel.js
+//= libs/jquery.smoothdivscroll-1.3-min.js
 /* my scripts */
 
 //= partials/main.js

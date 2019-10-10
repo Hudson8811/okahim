@@ -147,11 +147,8 @@
     }
 
     .grid-images{
-      display: flex;
-      justify-content: center;
       height: 378px;
       overflow: hidden;
-      padding-top: 30px;
       margin-top: 90px;
       @include media((
               padding-top: (md: 26px),
@@ -159,6 +156,8 @@
               height: (md: 250px)
       ));
       .col{
+        float: left;
+        transition: margin 0.5s linear;
         +.col{
           margin-left: 20px;
           @include media((
