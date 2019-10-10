@@ -419,7 +419,7 @@ function initBtn() {
                 clicked = false;
                 return;
             }
-
+            bt1c.style.filter = 'none';
             TweenLite.to($circlesTopLeft, 0.2, { x: 8, y: 8, scaleY: 1, ease: SlowMo.ease.config(0.1, 0, false) });
             TweenLite.to($circlesBottomRight, 0.2, { x: -8, y: -8, scaleY: 1, ease: SlowMo.ease.config(0.1, 0, false) });
         });
