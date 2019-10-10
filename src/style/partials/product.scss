@@ -1,5 +1,5 @@
 .catalog-menu{
-  width: 310px;
+  width: 100%;
   border-radius: 15px;
   background: $lightGray;
   box-sizing: border-box;
@@ -8,6 +8,9 @@
     box-sizing: border-box;
     width: 100%;
     list-style: none;
+    @include media((
+            padding: (md: 24px)
+    ));
     > li{
       position: relative;
       +li{
@@ -112,7 +115,7 @@
   .main-side{
     width: 752px;
     @include media((
-            width: (md: 100%)
+            width: (md: calc(100% - 300px),sm: 100%)
     ));
 
     .table-image-block{
