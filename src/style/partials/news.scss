@@ -1,8 +1,8 @@
 /*Блок "Карточка новостей"*/
 
-@media (min-width:781px) {
+@media (min-width:760px) {
     .big-news-card {
-        width: 553px - 30px !important;
+        width: 553px - 31px !important;
         height: 370px - (27px * 2);
         display: flex;
         flex-direction: column;
@@ -215,7 +215,7 @@
     }
 }
 
-@media (max-width:780px) {
+@media (max-width:759px) {
 
     .big-news-card,
     .small-news-card {
