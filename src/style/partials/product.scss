@@ -129,7 +129,7 @@
   .main-side{
     width: 752px;
     @include media((
-            width: (md: calc(100% - 300px),1023: 100%)
+            width: (md: calc(100% - 300px),999: 100%)
     ));
 
     .table-image-block{

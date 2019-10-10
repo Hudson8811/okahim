@@ -2,7 +2,7 @@
   width: 310px;
   display: block;
   @include media((
-          display: (1023: none),
+          display: (999: none),
           width: (md: 270px)
   ));
   .download-btn{
@@ -136,7 +136,7 @@
     .main-side{
       width: 752px;
       @include media((
-              width: (md: calc(100% - 300px),1023: 100%)
+              width: (md: calc(100% - 300px),999: 100%)
       ));
 
       .top-side{
