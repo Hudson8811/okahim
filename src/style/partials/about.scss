@@ -157,7 +157,7 @@
       ));
       .col{
         float: left;
-        transition: margin-top 0.5s linear;
+        transition: margin 0.5s linear;
         +.col{
           margin-left: 20px;
           @include media((
