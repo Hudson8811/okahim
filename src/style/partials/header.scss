@@ -36,6 +36,7 @@ header {
 
         img {
             width: 278px;
+            height: 100%;
         }
     }
 
@@ -57,7 +58,7 @@ header {
             border-bottom: 1px solid #cccccc;
             width: 206px;
             padding: 0 30px 0 3px;
-
+            height: 30px;
             &::placeholder {
                 color: #666666;
             }
