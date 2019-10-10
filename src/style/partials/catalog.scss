@@ -163,6 +163,9 @@
                       font-size: (md: 14px),
                       line-height: (mb: 24px)
               ));
+              &:hover{
+                text-decoration: underline;
+              }
             }
           }
           &.dual{

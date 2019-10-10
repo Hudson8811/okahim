@@ -7,6 +7,7 @@
 //= libs/swiper.min.js
 //= libs/tooltipster.bundle.min.js
 //= libs/slick.min.js
+//= libs/validate.js
 /* my scripts */
 
 //= partials/main.js
