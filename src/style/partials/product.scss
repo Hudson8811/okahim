@@ -25,6 +25,10 @@
         font-size: 16px;
         line-height: 26px;
         font-weight: 500;
+        @include media((
+                font-size: (md: 14px),
+                line-height: (md: 24px),
+        ));
         &:hover{
           text-decoration: underline;
         }
@@ -61,6 +65,10 @@
             font-size: 16px;
             line-height: 26px;
             font-weight: 500;
+            @include media((
+                    font-size: (md: 14px),
+                    line-height: (md: 24px),
+            ));
             &:hover{
               text-decoration: underline;
             }
@@ -77,6 +85,9 @@
   .by_type{
     padding: 30px;
     border-top: 1px solid rgba(204, 204, 204, 0.4);
+    @include media((
+            padding: (md: 24px)
+    ));
     a{
       img{
         width: 17px;
@@ -94,6 +105,9 @@
         display: inline-block;
         vertical-align: middle;
         margin-left: 10px;
+        @include media((
+              font-size: (md: 14px)
+        ));
       }
       &:hover{
         span{
@@ -115,7 +129,7 @@
   .main-side{
     width: 752px;
     @include media((
-            width: (md: calc(100% - 300px),sm: 100%)
+            width: (md: calc(100% - 300px),999: 100%)
     ));
 
     .table-image-block{
