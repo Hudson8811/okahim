@@ -148,6 +148,25 @@
         padding-bottom: 32px;
     }
 
+    &--blue {
+        background-color: #455bd7;
+
+        .type {
+            color: #fff;
+        }
+
+        .title {
+            color: #fff;
+        }
+
+        .date {
+            color: #b2b9ec;
+        }
+        &:hover{
+            margin-top: -10px;
+
+        }
+    }
 }
 
 @media (max-width:1200px) {
@@ -280,15 +299,21 @@
         }
 
 
-        .pic {}
+        &--blue {
+            background-color: #455bd7;
 
-        .type {}
+            .type {
+                color: #fff;
+            }
 
-        .title {
-            &:hover {}
+            .title {
+                color: #fff;
+            }
+
+            .date {
+                color: #b2b9ec;
+            }
         }
-
-        .date {}
     }
 }
 
@@ -309,7 +334,7 @@
 
 
 
-        .pagination{
+        .pagination {
             margin-top: 30px;
         }
     }
