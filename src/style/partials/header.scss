@@ -537,6 +537,11 @@ header {
 
 }
 
+@media only screen and (max-width: 460px) {
+    .modal-form {
+        padding-top: 77px !important;
+    }
+}
 
 ///////////////////////////////////
 
