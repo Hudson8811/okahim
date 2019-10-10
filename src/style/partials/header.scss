@@ -355,6 +355,7 @@ header {
             background-color: #f7f8f9;
             cursor: pointer;
             position: relative;
+            transition-duration: .2s;
 
             span,
             span::before,
@@ -383,15 +384,20 @@ header {
             }
 
             &.active {
+                background: #333333;
+
                 span {
+                    background-color: #fff;
                     height: 0;
 
                     &::before {
                         transform: rotate(45deg);
+                        background-color: #fff;
                     }
 
                     &::after {
                         transform: rotate(-45deg);
+                        background-color: #fff;
                     }
                 }
             }
@@ -541,9 +547,7 @@ header {
     cursor: unset;
     padding: 80px 80px 54px;
 
-    @include media((
-            padding: (sm: 30px)
-    ));
+    @include media((padding: (sm: 30px)));
 
     .fancybox-close-small {
         @extend .close-btn;
@@ -556,6 +560,7 @@ header {
 
         right: 30px;
         top: 30px;
+
         svg {
             display: none;
         }
@@ -574,9 +579,8 @@ header {
     .input-line {
         display: flex;
         margin-top: 11px;
-        @include media((
-                display: (sm: block)
-        ));
+        @include media((display: (sm: block)));
+
         .desc {
             font-size: 16px;
             line-height: 36px;
@@ -592,17 +596,14 @@ header {
 
         input {
             @extend .input;
-            @include media((
-                    width: (sm: 100%)
-            ));
+            @include media((width: (sm: 100%)));
         }
 
         .message {
             @extend .input;
             height: 130px;
-            resize: none;@include media((
-                width: (sm: 100%)
-        ));
+            resize: none;
+            @include media((width: (sm: 100%)));
         }
     }
 
@@ -666,6 +667,7 @@ header {
         display: flex;
         justify-content: center;
         width: 100%;
+
         .btn-orange {
             margin: 30px auto 0;
         }
