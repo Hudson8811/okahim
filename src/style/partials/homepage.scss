@@ -1364,8 +1364,11 @@ html {
 }
 
 
-@media (max-width:740px) {
 
+@media (max-width:740px) {
+    .body-homepage {
+        background-position: 60% 43px;
+    }
     .full-width-slider {
         .swiper-container {
             .swiper-slide {
