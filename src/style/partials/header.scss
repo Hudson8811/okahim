@@ -339,13 +339,19 @@ header {
 
 @media (max-width:740px) {
     header {
-        &.header_with-box-shadow {}
+        &.header_with-box-shadow {
+
+        }
     }
+    .body-homepage header{
+        box-shadow: 0 0 30px rgba(9, 32, 61, 0.2) !important;
+    }
+
 
     .page-header {
         &__top-line {
             justify-content: space-between;
-            padding: 16px 0 29px;
+            padding: 16px 0 16px;
         }
 
         &__burger {
@@ -437,6 +443,7 @@ header {
             left: 0;
             background: #ffffff;
             padding-bottom: 43px;
+            padding-top: 13px;
         }
 
         &__menu {
