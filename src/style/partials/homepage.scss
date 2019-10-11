@@ -255,8 +255,7 @@ html {
                     pointer-events: none;
                 }
 
-                &.active,
-                &:hover {
+                &:not(.active){
 
                     color: #455bd7;
 
