@@ -294,11 +294,21 @@
             .center{
               width: 45px;
               height: 45px;
-              object-fit: contain;
               z-index: 1;
               display: block;
-              filter: brightness(1);
-              transition: filter 0.2s linear;
+              svg{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+                .svg-w{
+                  transition:  all 0.2s linear;
+                  fill:#455bd7;
+                  stroke:#455bd7;
+                  stroke-linecap:round;
+                  stroke-linejoin:round;
+                }
+              }
             }
             .before{
               width: 138%;
@@ -323,7 +333,12 @@
             }
             .icon{
               .center{
-                filter: brightness(100);
+                svg{
+                  .svg-w{
+                    fill:#ffffff;
+                    stroke:#ffffff;
+                  }
+                }
               }
               .before{
                 opacity: 0;
