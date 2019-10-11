@@ -11,6 +11,9 @@ html {
     header{
         box-shadow: none;
     }
+    main{
+        overflow: hidden;
+    }
 }
 
 @media (min-width:2000px) {
@@ -479,7 +482,6 @@ html {
 }
 
 .predstavitelstva{
-    overflow: hidden;
 }
 
 .predstavitelstva .container {
