@@ -30,7 +30,12 @@ $(document).ready(function () {
             arrow: false,
             side: 'bottom',
             theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
-            interactive: true
+            interactive: true,
+
+            minWidth: 372,
+            maxWidth: 372
+
+
         });
     });
 

@@ -382,7 +382,7 @@ html {
 
 .tooltipster-noir.tooltipster-noir-customized.tooltipster-base.tooltipster-sidetip {
     height: auto !important;
-
+    margin-left: -45px;
     .tooltipster-box {
         box-shadow: -7px 19px 50px rgba(9, 32, 61, 0.2);
         border-radius: 15px;
@@ -402,6 +402,7 @@ html {
 
                 &:hover {
                     font-weight: 700;
+                    letter-spacing: -0.025em;
                 }
 
                 &:active {}
