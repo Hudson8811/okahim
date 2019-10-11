@@ -1695,16 +1695,13 @@ html {
     }
 
     .catalog .top .tab-controls {
-        display: block;
+        justify-content: center;
 
-        .item {
-            display: flex;
-            justify-content: center;
+        margin-left: -15px;
+        margin-right: -15px;
 
-            &:after {
-                content: none;
-            }
-        }
+        width: calc(100% + 30px);
+
     }
 
     .catalog .tabs .tab .title {
@@ -1734,5 +1731,20 @@ html {
 
     .parthners-homepage .parthners-container .parthner {
         margin: 0 12px 60px;
+    }
+}
+
+
+@media (max-width:330px) {
+    .catalog .top .tab-controls {
+       .item{
+           svg{
+               margin-right: 8px;
+           }
+           &::after {
+               margin: 0 10px;
+           }
+       }
+
     }
 }
