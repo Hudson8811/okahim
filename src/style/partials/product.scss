@@ -298,6 +298,12 @@
                   margin-top: (md: 26px)
           ));
         }
+        .swiper-button-prev{
+          left: 30px;
+        }
+        .swiper-button-next{
+          right: 30px;
+        }
         .swiper-button-prev,
         .swiper-button-next{
           top: calc( (100% - 36px) /2 - 25px);
@@ -341,6 +347,7 @@
           height: 7px;
           display: inline-block;
           vertical-align: middle;
+          margin-left: 10px;
         }
         &:hover{
           span{
