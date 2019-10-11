@@ -8,7 +8,9 @@ html {
 .body-homepage {
     background: #1333a4 url(../img/background.png) no-repeat top center;
     background-size: 100% auto;
-
+    header{
+        box-shadow: none;
+    }
 }
 
 @media (min-width:2000px) {
@@ -31,7 +33,7 @@ html {
                 &__lang {
 
                     li {
-                        border-right: 1px solid #8aa3ff;
+                        border-color: #8aa3ff;
                         color: #ffffff;
                     }
 
@@ -151,7 +153,7 @@ html {
         height: 50px;
         border-radius: 25px;
         border: 2px solid #d6d6d6;
-        background: #fff;
+        background: transparent;
         position: absolute;
         top: 40.8%;
         box-sizing: border-box;
@@ -391,13 +393,6 @@ html {
         .tooltipster-content {
             padding: 34px 40px 43px;
 
-            .title {
-                font-size: 16px;
-                font-weight: 700;
-                line-height: 38px;
-                color: #333333;
-            }
-
             a {
                 display: block;
                 font-size: 16px;
@@ -406,7 +401,7 @@ html {
                 color: #333333;
 
                 &:hover {
-                    text-decoration: underline;
+                    font-weight: 700;
                 }
 
                 &:active {}
