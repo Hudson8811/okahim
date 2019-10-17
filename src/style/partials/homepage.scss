@@ -345,6 +345,8 @@ html {
                 line-height: 36px;
                 display: flex;
                 align-items: center;
+                cursor: pointer;
+
 
                 &::after {
                     content: '';
@@ -359,9 +361,10 @@ html {
                 }
 
                 &:hover {
-                    &::after {
+                    text-decoration: underline;
+                    /*&::after {
                         transform: rotate(180deg);
-                    }
+                    }*/
                 }
             }
 
@@ -385,6 +388,7 @@ html {
 .tooltipster-noir.tooltipster-noir-customized.tooltipster-base.tooltipster-sidetip {
     height: auto !important;
     margin-left: -45px;
+    margin-top: -68px;
     .tooltipster-box {
         box-shadow: -7px 19px 50px rgba(9, 32, 61, 0.2);
         border-radius: 15px;
@@ -394,22 +398,79 @@ html {
 
         .tooltipster-content {
             padding: 34px 40px 43px;
+            @include media((
+                    padding: (md: 25px 42px 24px 25px)
+            ));
+            .close{
+                width: 15px;
+                height: 15px;
+                display: block;
+                position: absolute;
+                right: 27px;
+                top: 28px;
+                cursor: pointer;
+                opacity: 0.5;
+                background: url("../img/close.svg") center center no-repeat;
+                background-size: contain;
+                &:hover{
+                    opacity: 1;
+                }
+            }
 
-            a {
+            .title {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 1.4;
+                color: #333333;
+                letter-spacing: -0.025em;
+                margin-bottom: 25px;
+                @include media((
+                        margin-bottom: (md: 15px)
+                ));
+            }
+            a:not(.goto) {
                 display: block;
                 font-size: 16px;
                 font-weight: 500;
-                line-height: 36px;
+                line-height: 1.4;
                 color: #333333;
 
+                @include media((
+                        font-size: (md: 14px)
+                ));
+
                 &:hover {
-                    font-weight: 700;
-                    letter-spacing: -0.025em;
+                    text-decoration: underline;
                 }
 
                 &:active {}
 
                 &:focus {}
+                +a{
+                    margin-top: 15px;
+                    @include media((
+                            margin-bottom: (md: 10px)
+                    ));
+                }
+            }
+            a.goto{
+                font-size: 16px;
+                font-weight: 500;
+                color: $blue;
+                text-decoration: underline;
+                display: inline-block;
+                padding-right: 20px;
+                background: url("../img/arr-right-blue.svg") right center no-repeat;
+                background-size: 7px 10px;
+                margin-bottom: 30px;
+                @include media((
+                        font-size: (md: 14px),
+                        margin-bottom: (md: 15px)
+                ));
+                &:hover{
+                    text-decoration: none;
+
+                }
             }
         }
     }

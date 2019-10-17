@@ -459,16 +459,28 @@ $(document).ready(function () {
             delay: 200,
             content: $(this).siblings('.invisible-refs').html(),
             contentAsHTML: true,
-            //trigger: 'click',
+            trigger: 'custom',
+            triggerOpen: {
+                click: true,
+            },
             arrow: false,
             side: 'bottom',
+            viewportAware: false,
             theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
             interactive: true,
 
             minWidth: 372,
-            maxWidth: 372
+            maxWidth: 372,
 
+            functionBefore: function(){
+                $('.catalog .tabs .item .title').tooltipster('hide');
+            },
 
+            functionReady: function(){
+                $('.tooltipster-content .close').click(function(){
+                    $('.catalog .tabs .item .title').tooltipster('hide');
+                });
+            },
         });
     });
 
