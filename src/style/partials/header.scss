@@ -100,6 +100,13 @@ header {
             top: 8px;
             transition-duration: .2s;
         }
+
+        a{
+            color: #333333;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
 
     &__phone-numbers-visible {
@@ -139,6 +146,12 @@ header {
         .number {
             white-space: nowrap;
             line-height: 16px;
+            a{
+                color: #333333;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
         }
     }
 

@@ -147,13 +147,10 @@
     }
 
     .grid-images{
-      height: 378px;
-      overflow: hidden;
       margin-top: 90px;
       @include media((
               padding-top: (md: 26px),
-              margin-top: (md: 44px),
-              height: (md: 250px)
+              margin-top: (md: 44px)
       ));
       .col{
         float: left;
@@ -162,6 +159,12 @@
         @include media((
                 margin-left: (md: 15px)
         ));
+        &:last-child{
+          margin-right: 20px;
+          @include media((
+                  margin-right: (md: 15px)
+          ));
+        }
         +.col{
 
         }
@@ -178,6 +181,7 @@
           position: relative;
           border-radius: 15px;
           transition: transform 0.2s linear;
+          cursor: pointer;
           @include media((
                   width: (md: 206px),
                   height: (md: 138px)
@@ -227,8 +231,13 @@
 
   .production-block{
     padding-top: 120px;
+    margin-top: -120px;
+    position: relative;
+    z-index: 10;
+    background: #ffffff;
     @include media((
-            padding-top: (md: 70px)
+            padding-top: (md: 70px),
+            margin-top: (md: -80px)
     ));
     .text-block{
       .text-block-title{

@@ -1,12 +1,14 @@
 $(document).ready(function () {
     var headerNumbers = $('.page-header__another-phones');
     var phpnv = $('.page-header__phone-numbers-visible');
-    $('.page-header__phone-numbers-visible').click(function () {
-        phpnv.toggleClass('another-visible');
-        headerNumbers.stop().slideToggle(200);
+    $('.page-header__phone-numbers-visible').click(function (e) {
+        if (!$('a').is(e.target)){
+            phpnv.toggleClass('another-visible');
+            headerNumbers.stop().slideToggle(200);
+        }
     });
     $(document).mouseup(function (e) {
-        if (!headerNumbers.is(e.target) && !$('.page-header__main-phone').is(e.target) && !$('.page-header__phones-desc').is(e.target)
+        if (!headerNumbers.is(e.target) && !$('.page-header__main-phone').is(e.target) && !$('.page-header__main-phone a').is(e.target)  && !$('.page-header__phones-desc').is(e.target)
             && headerNumbers.has(e.target).length === 0) {
             if (headerNumbers.css('display') !== 'none') {
                 phpnv.removeClass('another-visible');

@@ -7,11 +7,13 @@ $(document).ready(function() {
 
     $(".about-page .first-block .grid-images").smoothDivScroll({
         mousewheelScrolling: "",
-        manualContinuousScrolling: true,
+        manualContinuousScrolling: false,
         autoScrollingMode: "always",
+        autoScrollingDirection: "backAndForth",
         autoScrollingStep: 1,
         touchScrolling: true
     });
+    
 });
 
 
