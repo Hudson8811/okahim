@@ -170,6 +170,12 @@
 				// Use jquery.kinetic.js for touch scrolling
 				// Vertical scrolling disabled
 				el.data("scrollWrapper").kinetic({
+					/*filterTarget: function(target, e){
+						console.log(e);
+						if (!/down|start/.test(e.type)){
+							return !(/area|a|input/i.test(target.tagName));
+						}
+					},*/
 					y: false,
 					moved: function (settings) {
 						if (o.manualContinuousScrolling) {

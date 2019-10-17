@@ -457,6 +457,9 @@ header {
             background: #ffffff;
             padding-bottom: 43px;
             padding-top: 13px;
+            height: calc(100vh - 80px);
+            overflow-x: hidden;
+            box-sizing: border-box;
         }
 
         &__menu {
@@ -527,9 +530,10 @@ header {
         &__another-phones {
             left: -15px;
             width: 100%;
-            padding: 12px 15px;
+            padding: 12px 0;
             text-align: center;
-
+            position: static;
+            box-shadow: none;
             .city {
                 line-height: 32px;
             }

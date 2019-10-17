@@ -11,9 +11,9 @@ $(document).ready(function() {
         autoScrollingMode: "always",
         autoScrollingDirection: "backAndForth",
         autoScrollingStep: 1,
-        touchScrolling: true
+        touchScrolling: false
     });
-    
+
 });
 
 
