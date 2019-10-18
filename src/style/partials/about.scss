@@ -150,6 +150,7 @@
       margin-top: 90px;
       @include media((
               padding-top: (md: 26px),
+              padding-bottom: (md: 26px),
               margin-top: (md: 44px)
       ));
       .col{
@@ -237,7 +238,7 @@
     background: #ffffff;
     @include media((
             padding-top: (md: 70px),
-            margin-top: (md: -80px)
+            margin-top: (md: 0)
     ));
     .text-block{
       .text-block-title{
